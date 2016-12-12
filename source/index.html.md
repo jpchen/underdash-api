@@ -9,25 +9,17 @@ toc_footers:
   - <a href='https://github.com/jpchen/slate'>Contribute on Github</a>
 
 includes:
+ - lodash
 
 search: true
 ---
 
 # Introduction
 
- This is a cross documentation of [lodash](https://lodash.com/) and [underscore.js](http://underscorejs.org/).  This rose from my need to translate some underscore.js code, and I noticed that there was no place which aggregated the APIs together.  This does not attempt to prescribe one nor the other as the library of choice, as there is plenty of [discussion](http://stackoverflow.com/questions/13789618/differences-between-lodash-and-underscore) of that already  As of the date of writing, this uses lodash 4.17.2 and 1.8.3.  Freely use for your own benefit (risk).
+ This is a cross documentation of [lodash](https://lodash.com/) and [underscore.js](http://underscorejs.org/).  This arose from my need to translate some underscore.js code, and I noticed that there was no place that aggregated the APIs together.  This does not attempt to prescribe one nor the other as the library of choice, as there is plenty of [discussion](http://stackoverflow.com/questions/13789618/differences-between-lodash-and-underscore) of that already  As of the date of writing, this uses lodash [4.17.2](https://www.npmjs.com/package/lodash) and underscore [1.8.3](https://www.npmjs.com/package/underscore).  Freely use for your own benefit (risk).
 
 
-# Kittens
-
-## Get All Kittens
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
+# Get All Kittens
 
 ```python
 import kittn
@@ -35,19 +27,6 @@ import kittn
 api = kittn.authorize('meowmeowmeow')
 api.kittens.get()
 ```
-
-```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
-```
-
 > The above command returns JSON structured like this:
 
 ```json
@@ -68,75 +47,3 @@ let kittens = api.kittens.get();
   }
 ]
 ```
-
-This endpoint retrieves all kittens.
-
-### HTTP Request
-
-`GET http://example.com/api/kittens`
-
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-
-## Get a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
-}
-```
-
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-
-### HTTP Request
-
-`GET http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
-

@@ -9,53 +9,15 @@ toc_footers:
   - <a href='https://github.com/jpchen/slate'>Contribute on Github</a>
 
 includes:
+ - lodash
 
 search: true
 ---
 
 # Introduction
 
- This is a cross documentation of [lodash](https://lodash.com/) and [underscore.js](http://underscorejs.org/).  This rose from my need to translate some underscore.js code, and I noticed that there was no place which aggregated the APIs together.  This does not attempt to prescribe one nor the other as the library of choice, as there is plenty of [discussion](http://stackoverflow.com/questions/13789618/differences-between-lodash-and-underscore) of that already  As of the date of writing, this uses lodash 4.17.2 and 1.8.3.  Freely use for your own benefit (risk).
+ This is a cross documentation of [lodash](https://lodash.com/) and [underscore.js](http://underscorejs.org/).  This arose from my need to translate some underscore.js code, and I noticed that there was no place that aggregated the APIs together.  This does not attempt to prescribe one nor the other as the library of choice, as there is plenty of [discussion](http://stackoverflow.com/questions/13789618/differences-between-lodash-and-underscore) of that already  As of the date of writing, this uses lodash [4.17.2](https://www.npmjs.com/package/lodash) and underscore [1.8.3](https://www.npmjs.com/package/underscore).  Freely use for your own benefit (risk).
 
-# Authentication
-
-> To authorize, use this code:
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-```
-
-> Make sure to replace `meowmeowmeow` with your API key.
-
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
 
 # Kittens
 
@@ -140,42 +102,4 @@ import kittn
 api = kittn.authorize('meowmeowmeow')
 api.kittens.get(2)
 ```
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
-```
-
 > The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
-}
-```
-
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-
-### HTTP Request
-
-`GET http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
-
