@@ -14,7 +14,7 @@ search: true
 
 # Introduction
 
- This is a cross documentation of [lodash](https://lodash.com/) and [underscore.js](http://underscorejs.org/).  This arose from my need to translate some underscore.js code, and I noticed that there was no place that aggregated the APIs together.  This does not attempt to prescribe one nor the other as the library of choice, as there is plenty of [discussion](http://stackoverflow.com/questions/13789618/differences-between-lodash-and-underscore) of that already  As of the date of writing, this uses lodash [4.17.2](https://www.npmjs.com/package/lodash) and underscore [1.8.3](https://www.npmjs.com/package/underscore).  Freely use for your own benefit (risk).
+ This is a cross documentation of [lodash](https://lodash.com/) and [underscore.js](http://underscorejs.org/).  This arose from my need to translate some underscore.js code, and I noticed that there was no place that aggregated the APIs together.  This does not attempt to prescribe one nor the other as the library of choice, as there is plenty of [discussion](http://stackoverflow.com/questions/13789618/differences-between-lodash-and-underscore) of that already.  As of the date of writing, this uses lodash [4.17.2](https://www.npmjs.com/package/lodash) and underscore [1.8.3](https://www.npmjs.com/package/underscore).  Freely use for your own benefit (risk).
 
 # Table of Contents
 
@@ -719,11 +719,6 @@ invoked with three arguments: *(value, index, array)*.
 
 #### Returns
 *(Array)*: Returns the slice of `array`.
-
-
-```underscore
-Test code
-```
 
 ---
 
@@ -2670,6 +2665,13 @@ arguments: *(value, index|key, collection)*.
 <br>
 **Note:** Unlike `_.remove`, this method returns a new array.
 
+### Underscore
+<code>_.filter(list, predicate, [context])</code> Alias: select <br> <br>
+<code>_.where(list, properties)</code> <br> 
+* Looks through each value in the list, returning an array of all the values that contain all of the key-value pairs listed in properties.<br> <br>
+<code>_.findWhere(list, properties)</code> <br>
+* Looks through the list and returns the first value that matches all of the key-value pairs listed in properties.  If no match is found, or if list is empty, undefined will be returned. <br>
+
 #### Since
 0.1.0
 
@@ -2888,6 +2890,9 @@ Iteratee functions may exit iteration early by explicitly returning `false`.
 property are iterated like arrays. To avoid this behavior use `_.forIn`
 or `_.forOwn` for object iteration.
 
+#### Underscore
+<code>_.each(list, iteratee, [context])</code> Alias: forEach 
+
 #### Since
 0.1.0
 
@@ -2990,6 +2995,10 @@ _.includes({ 'a': 1, 'b': 2 }, 1);
 
 _.includes('abcd', 'bc');
 // => true
+
+//Underscore
+_.contains([1, 2, 3], 3);
+=> true
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L9448 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.includes "See the npm package") [&#x24C9;][1]
 
@@ -2998,6 +3007,9 @@ checked for a substring of `value`, otherwise
 [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
 is used for equality comparisons. If `fromIndex` is negative, it's used as
 the offset from the end of `collection`.
+
+#### Underscore
+<code>.contains(list, value, [fromIndex])</code> Alias: includes 
 
 #### Since
 0.1.0
@@ -7155,6 +7167,11 @@ Subsequent sources overwrite property assignments of previous sources.
 **Note:** This method mutates `object` and is loosely based on
 [`Object.assign`](https://mdn.io/Object/assign).
 
+### Underscore
+_.extendOwn(destination, *sources) Alias: assign <br>
+Like extend, but only copies own properties over to the destination object.
+
+
 #### Since
 0.10.0
 
@@ -7198,8 +7215,7 @@ inherited source properties.
 **Note:** This method mutates `object`.
 
 #### Underscore
-_.extendOwn(destination, *sources)
-Alias: assign
+_.extendOwn(destination, *sources) Alias: assign <br>
 Like Underscore's extend, but only copies own properties over to the destination object.
 
 #### Since
@@ -7811,6 +7827,9 @@ _.has(other, 'a');
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L13144 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.has "See the npm package") [&#x24C9;][1]
 
 Checks if `path` is a direct property of `object`.
+
+### Underscore
+<code>_.has(object, key) </code>
 
 #### Since
 0.1.0
