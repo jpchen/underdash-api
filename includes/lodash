@@ -1,125 +1,3 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
-
-    <style>
-      .highlight table td { padding: 5px; }
-.highlight table pre { margin: 0; }
-.highlight, .highlight .w {
-  color: #f8f8f2;
-  background-color: #272822;
-}
-.highlight .err {
-  color: #272822;
-  background-color: #f92672;
-}
-.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
-  color: #75715e;
-}
-.highlight .cp {
-  color: #f4bf75;
-}
-.highlight .nt {
-  color: #f4bf75;
-}
-.highlight .o, .highlight .ow {
-  color: #f8f8f2;
-}
-.highlight .p, .highlight .pi {
-  color: #f8f8f2;
-}
-.highlight .gi {
-  color: #a6e22e;
-}
-.highlight .gd {
-  color: #f92672;
-}
-.highlight .gh {
-  color: #66d9ef;
-  background-color: #272822;
-  font-weight: bold;
-}
-.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
-  color: #ae81ff;
-}
-.highlight .kc {
-  color: #fd971f;
-}
-.highlight .kt {
-  color: #fd971f;
-}
-.highlight .kd {
-  color: #fd971f;
-}
-.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
-  color: #a6e22e;
-}
-.highlight .sr {
-  color: #a1efe4;
-}
-.highlight .si {
-  color: #cc6633;
-}
-.highlight .se {
-  color: #cc6633;
-}
-.highlight .nn {
-  color: #f4bf75;
-}
-.highlight .nc {
-  color: #f4bf75;
-}
-.highlight .no {
-  color: #f4bf75;
-}
-.highlight .na {
-  color: #66d9ef;
-}
-.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
-  color: #a6e22e;
-}
-.highlight .ss {
-  color: #a6e22e;
-}
-    </style>
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all.js"></script>
-  </head>
-
-  <body class="index" data-languages="[&quot;javascript&quot;]">
-    <a href="#" id="nav-button">
-      <span>
-        NAV
-        <img src="images/navbar.png" alt="Navbar" />
-      </span>
-    </a>
-    <div class="tocify-wrapper">
-      <img src="images/logo.png" alt="Logo" />
-        <div class="lang-selector">
-              <a href="#" data-language-name="javascript">javascript</a>
-        </div>
-        <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
-        </div>
-        <ul class="search-results"></ul>
-      <div id="toc">
-      </div>
-        <ul class="toc-footer">
-            <li><a href='https://github.com/jpchen/underdash-api'>Contribute on Github</a></li>
-        </ul>
-    </div>
-    <div class="page-wrapper">
-      <div class="dark-box"></div>
-      <div class="content">
-        <h1 id="introduction">Introduction</h1>
-
-<p>This is a cross documentation of <a href="https://lodash.com/">lodash</a> and <a href="http://underscorejs.org/">underscore.js</a>.  This arose from my need to translate some underscore.js code, and I noticed that there was no place that aggregated the APIs together.  This does not attempt to prescribe one nor the other as the library of choice, as there is plenty of <a href="http://stackoverflow.com/questions/13789618/differences-between-lodash-and-underscore">discussion</a> of that already  As of the date of writing, this uses lodash <a href="https://www.npmjs.com/package/lodash">4.17.2</a> and underscore <a href="https://www.npmjs.com/package/underscore">1.8.3</a>.  Freely use for your own benefit (risk).</p>
-
 <h1 id="table-of-contents">Table of Contents</h1>
 
 <!-- div class="toc-container" -->
@@ -142,7 +20,7 @@
 <li><a href="#_findlastindexarray-predicate_identity-fromindexarraylength-1"><code class="prettyprint">_.findLastIndex</code></a></li>
 <li><a href="#_headarray&quot;%20class=&quot;alias"><code class="prettyprint">_.first</code> -&gt; <code class="prettyprint">head</code></a></li>
 <li><a href="#_flattenarray"><code class="prettyprint">_.flatten</code></a></li>
-<li><a href="#_flattendeeparray"><code class="prettyprint">_.flattenDeep</code></a></li>
+<li><a href="#_flattendeeparray"><code class="prettyprint">_.falttenDeep</code></a></li>
 <li><a href="#_flattendeptharray-depth1"><code class="prettyprint">_.flattenDepth</code></a></li>
 <li><a href="#_frompairspairs"><code class="prettyprint">_.fromPairs</code></a></li>
 <li><a href="#_headarray"><code class="prettyprint">_.head</code></a></li>
@@ -515,7 +393,9 @@
 
 <h1 id="array">Array</h1>
 
-<h2 id="_-chunk-array-size-1"><a name="_chunkarray-size1"></a><code>_.chunk(array, [size=1])</code></h2>
+<h2 id="test">Test</h2>
+
+<h2 id="_-chunk-array-size-1"><a name="_chunkarray-size1"><code>_.chunk(array, [size=1])</code></a></h2>
 
 <p><a href="https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L6856" title="View in source">&#x24C8;</a> <a href="https://www.npmjs.com/package/lodash.chunk" title="See the npm package">&#x24C3;</a> <a href="#array" title="Jump back to the TOC.">&#x24C9;</a></p>
 
@@ -545,7 +425,7 @@ elements.</p>
 </code></pre>
 <hr>
 
-<h2 id="_-compact-array"><a name="_compactarray"><code>_.compact(array)</code></a></h2>
+<h2 id=""><a name=""></a></h2>
 
 <p><a href="https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L6891" title="View in source">&#x24C8;</a> <a href="https://www.npmjs.com/package/lodash.compact" title="See the npm package">&#x24C3;</a> <a href="#array" title="Jump back to the TOC.">&#x24C9;</a></p>
 
@@ -7737,10 +7617,6 @@ by running each own enumerable string keyed property of <code class="prettyprint
 <code class="prettyprint">iteratee</code>. The iteratee is invoked with three arguments:<br>
 <em>(value, key, object)</em>.</p>
 
-<h4 id="underscore">Underscore</h4>
-
-<p><code>_.mapObject(object, iteratee, [context]) </code></p>
-
 <h4 id="since">Since</h4>
 
 <p>2.4.0</p>
@@ -7755,6 +7631,10 @@ by running each own enumerable string keyed property of <code class="prettyprint
 <h4 id="returns">Returns</h4>
 
 <p><em>(Object)</em>: Returns the new mapped object.</p>
+
+<blockquote>
+<p>lodash</p>
+</blockquote>
 <pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">users</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s1">'fred'</span><span class="p">:</span>    <span class="p">{</span> <span class="s1">'user'</span><span class="p">:</span> <span class="s1">'fred'</span><span class="p">,</span>    <span class="s1">'age'</span><span class="p">:</span> <span class="mi">40</span> <span class="p">},</span>
   <span class="s1">'pebbles'</span><span class="p">:</span> <span class="p">{</span> <span class="s1">'user'</span><span class="p">:</span> <span class="s1">'pebbles'</span><span class="p">,</span> <span class="s1">'age'</span><span class="p">:</span> <span class="mi">1</span> <span class="p">}</span>
@@ -7766,12 +7646,13 @@ by running each own enumerable string keyed property of <code class="prettyprint
 <span class="c1">// The `_.property` iteratee shorthand.</span>
 <span class="nx">_</span><span class="p">.</span><span class="nx">mapValues</span><span class="p">(</span><span class="nx">users</span><span class="p">,</span> <span class="s1">'age'</span><span class="p">);</span>
 <span class="c1">// =&gt; { 'fred': 40, 'pebbles': 1 } (iteration order is not guaranteed)</span>
-
 <span class="nx">_</span><span class="p">.</span><span class="nx">mapObject</span><span class="p">({</span> <span class="na">one</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">two</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="na">three</span><span class="p">:</span> <span class="mi">3</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">v</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">v</span> <span class="o">*</span> <span class="mi">3</span><span class="p">;</span> <span class="p">});</span>
 
 <span class="c1">// =&gt; { one: 3, two: 6, three: 9 }</span>
 </code></pre>
-<hr>
+<blockquote>
+<h2 id="underscore">underscore</h2>
+</blockquote>
 
 <h2 id="_-merge-object-sources"><a name="_mergeobject-sources"><code>_.merge(object, [sources])</code></a></h2>
 
@@ -10990,13 +10871,3 @@ following template settings to use alternative delimiters.</p>
 <p><a href="https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L1786" title="View in source">&#x24C8;</a> <a href="#array" title="Jump back to the TOC.">&#x24C9;</a></p>
 
 <h2 id="a-reference-to-the-lodash-function">A reference to the <code class="prettyprint">lodash</code> function.</h2>
-
-      </div>
-      <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="javascript">javascript</a>
-          </div>
-      </div>
-    </div>
-  </body>
-</html>
