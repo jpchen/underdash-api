@@ -4,6 +4,14 @@
 
 The Kittn API uses the following error codes:
 
+```underscore
+
+asdklajsdklasdlk
+```
+> INSERTED TEXZT AGAIN
+```python
+whatever
+```
 
 Error Code | Meaning
 ---------- | -------
