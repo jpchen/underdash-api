@@ -1001,7 +1001,11 @@ _.fromPairs([['a', 1], ['b', 2]]);
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L7410 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.frompairs "See the npm package") [&#x24C9;][1]
 
 The inverse of `_.toPairs`; this method returns an object composed
-from key-value `pairs`.
+from key-value `pairs`. See `_.zipObject`
+
+#### Underscore
+<code> _.object(list, [values]) </code>
+
 
 #### Since
 4.0.0
@@ -2152,6 +2156,9 @@ for equality comparisons, in which only the first occurrence of each element
 is kept. The order of result values is determined by the order they occur
 in the array.
 
+#### Underscore
+<code>_.uniq(array, [isSorted], [iteratee])</code> Alias: unique 
+
 #### Since
 0.1.0
 
@@ -2460,11 +2467,20 @@ second elements of the given arrays, and so on.
 ```javascript
 _.zipObject(['a', 'b'], [1, 2]);
 // => { 'a': 1, 'b': 2 }
+
+_.object(['moe', 'larry', 'curly'], [30, 40, 50]);
+=> {moe: 30, larry: 40, curly: 50}
+
+_.object([['moe', 30], ['larry', 40], ['curly', 50]]);
+=> {moe: 30, larry: 40, curly: 50}
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L8672 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.zipobject "See the npm package") [&#x24C9;][1]
 
 This method is like `_.fromPairs` except that it accepts two arrays,
 one of property identifiers and one of corresponding values.
+
+#### Underscore
+<code> _.object(list, [values]) </code>
 
 #### Since
 0.4.0
@@ -2616,6 +2632,9 @@ invoked with three arguments: *(value, index|key, collection)*.
 [everything is true](https://en.wikipedia.org/wiki/Vacuous_truth) of
 elements of empty collections.
 
+#### Underscore
+<code> _.every(list, [predicate], [context])</code> Alias: all 
+
 #### Since
 0.1.0
 
@@ -2712,12 +2731,19 @@ _.find(users, ['active', false]);
 // The `_.property` iteratee shorthand.
 _.find(users, 'active');
 // => object for 'barney'
+
+//Underscore
+var even = _.find([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+=> 2
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L9229 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.find "See the npm package") [&#x24C9;][1]
 
 Iterates over elements of `collection`, returning the first element
 `predicate` returns truthy for. The predicate is invoked with three
 arguments: *(value, index|key, collection)*.
+
+#### Underscore
+<code>_.find(list, predicate, [context])</code> Alias: detect 
 
 #### Since
 0.1.0
@@ -3086,6 +3112,9 @@ each element of `collection` thru `iteratee`. The corresponding value of
 each key is the last element responsible for generating the key. The
 iteratee is invoked with one argument: *(value)*.
 
+#### Underscore
+See <code>_.object(list, [values]) </code>
+
 #### Since
 4.0.0
 
@@ -3141,6 +3170,9 @@ The guarded methods are:<br>
 `fill`, `invert`, `parseInt`, `random`, `range`, `rangeRight`, `repeat`,
 `sampleSize`, `slice`, `some`, `sortBy`, `split`, `take`, `takeRight`,
 `template`, `trim`, `trimEnd`, `trimStart`, and `words`
+
+#### Underscore
+<code>_.map(list, iteratee, [context]) </code> Alias: collect 
 
 #### Since
 0.1.0
@@ -3278,6 +3310,9 @@ The guarded methods are:<br>
 `assign`, `defaults`, `defaultsDeep`, `includes`, `merge`, `orderBy`,
 and `sortBy`
 
+#### Underscore
+<code>_.reduce(list, iteratee, [memo], [context])</code> Aliases: inject, foldl
+
 #### Since
 0.1.0
 
@@ -3310,6 +3345,9 @@ _.reduceRight(array, function(flattened, other) {
 
 This method is like `_.reduce` except that it iterates over elements of
 `collection` from right to left.
+
+#### Underscore
+<code>_.reduceRight(list, iteratee, memo, [context])</code> Alias: foldr 
 
 #### Since
 0.1.0
@@ -3519,6 +3557,9 @@ _.some(users, 'active');
 Checks if `predicate` returns truthy for **any** element of `collection`.
 Iteration is stopped once `predicate` returns truthy. The predicate is
 invoked with three arguments: *(value, index|key, collection)*.
+
+#### Underscore
+<code>_.some(list, [predicate], [context]) </code> Alias: any
 
 #### Since
 0.1.0
@@ -7168,7 +7209,7 @@ Subsequent sources overwrite property assignments of previous sources.
 [`Object.assign`](https://mdn.io/Object/assign).
 
 ### Underscore
-_.extendOwn(destination, *sources) Alias: assign <br>
+<code>_.extendOwn(destination, *sources) </code>Alias: assign <br>
 Like extend, but only copies own properties over to the destination object.
 
 
@@ -7215,8 +7256,8 @@ inherited source properties.
 **Note:** This method mutates `object`.
 
 #### Underscore
-_.extendOwn(destination, *sources) Alias: assign <br>
-Like Underscore's extend, but only copies own properties over to the destination object.
+<code>_.extend(destination, *sources) </code>
+Copes own and inherited properties to destination object.
 
 #### Since
 4.0.0
@@ -7999,6 +8040,9 @@ _.keys(new Foo);
 
 _.keys('hi');
 // => ['0', '1']
+
+_.keys({one: 1, two: 2, three: 3});
+=> ["one", "two", "three"]
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L13282 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.keys "See the npm package") [&#x24C9;][1]
 
@@ -8008,6 +8052,9 @@ Creates an array of the own enumerable property names of `object`.
 **Note:** Non-object values are coerced to objects. See the
 [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
 for more details.
+
+#### Underscore
+<code>_.keys(object)</code>
 
 #### Since
 0.1.0
@@ -10226,7 +10273,7 @@ _.truncate('hi-diddly-ho there, neighborino', {
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L15042 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.truncate "See the npm package") [&#x24C9;][1]
 
-Truncates `string` if it's longer than the given maximum string length.
+Truncates `string` if its longer than the given maximum string length.
 The last characters of the truncated string are replaced with the omission
 string which defaults to "...".
 
@@ -10636,11 +10683,22 @@ function square(n) {
 var addSquare = _.flowRight([square, _.add]);
 addSquare(1, 2);
 // => 9
+
+//UnderScore
+var greet    = function(name){ return "hi: " + name; };
+var exclaim  = function(statement){ return statement.toUpperCase() + "!"; };
+var welcome = _.compose(greet, exclaim);
+welcome('moe');
+=> 'hi: MOE!'
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L15435 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.flowright "See the npm package") [&#x24C9;][1]
 
 This method is like `_.flow` except that it creates a function that
 invokes the given functions from right to left.
+
+#### Underscore
+<code> _.compose(*functions)  </code>
+Returns the composition of a list of functions, where each function consumes the return value of the function that follows. In math terms, composing the functions f(), g(), and h() produces f(g(h())).
 
 #### Since
 3.0.0
@@ -10723,6 +10781,9 @@ function. If `func` is a property name, the created function returns the
 property value for a given element. If `func` is an array or object, the
 created function returns `true` for elements that contain the equivalent
 source properties, otherwise it returns `false`.
+
+#### Underscore
+<code> _.iteratee(value, [context])  </code>
 
 #### Since
 4.0.0
@@ -11211,11 +11272,14 @@ _.range(0);
 Creates an array of numbers *(positive and/or negative)* progressing from
 `start` up to, but not including, `end`. A step of `-1` is used if a negative
 `start` is specified without an `end` or `step`. If `end` is not specified,
-it's set to `start` with `start` then set to `0`.
+it is set to `start` with `start` then set to `0`.
 <br>
 <br>
 **Note:** JavaScript follows the IEEE-754 standard for resolving
 floating-point values which can produce unexpected results.
+
+#### Underscore
+<code>_.range([start=0], end, [step=1])</code>
 
 #### Since
 0.1.0
