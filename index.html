@@ -118,7 +118,7 @@
       <div class="content">
         <h1 id="introduction">Introduction</h1>
 
-<p>This is a cross documentation of <a href="https://lodash.com/">lodash</a> and <a href="http://underscorejs.org/">underscore.js</a>.  This arose from my need to translate some underscore.js code, and I noticed that there was no place that aggregated the APIs together.  This does not attempt to prescribe one nor the other as the library of choice, as there is plenty of <a href="http://stackoverflow.com/questions/13789618/differences-between-lodash-and-underscore">discussion</a> of that already  As of the date of writing, this uses lodash <a href="https://www.npmjs.com/package/lodash">4.17.2</a> and underscore <a href="https://www.npmjs.com/package/underscore">1.8.3</a>.  Freely use for your own benefit (risk).</p>
+<p>This is a cross documentation of <a href="https://lodash.com/">lodash</a> and <a href="http://underscorejs.org/">underscore.js</a>.  This arose from my need to translate some underscore.js code, and I noticed that there was no place that aggregated the APIs together.  This does not attempt to prescribe one nor the other as the library of choice, as there is plenty of <a href="http://stackoverflow.com/questions/13789618/differences-between-lodash-and-underscore">discussion</a> of that already.  As of the date of writing, this uses lodash <a href="https://www.npmjs.com/package/lodash">4.17.2</a> and underscore <a href="https://www.npmjs.com/package/underscore">1.8.3</a>.  Freely use for your own benefit (risk).</p>
 
 <h1 id="table-of-contents">Table of Contents</h1>
 
@@ -814,8 +814,7 @@ invoked with three arguments: <em>(value, index, array)</em>.</p>
 <h4 id="returns">Returns</h4>
 
 <p><em>(Array)</em>: Returns the slice of <code class="prettyprint">array</code>.</p>
-<pre class="highlight plaintext"><code>Test code
-</code></pre>
+
 <hr>
 
 <h2 id="dropwhile-array-predicate-identity"><a name="_dropwhilearray-predicate_identity"><code><em>.dropWhile(array, [predicate=</em>.identity])</code></a></h2>
@@ -1078,7 +1077,11 @@ of <code class="prettyprint">collection</code> from right to left.</p>
 <p><a href="https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L7410" title="View in source">&#x24C8;</a> <a href="https://www.npmjs.com/package/lodash.frompairs" title="See the npm package">&#x24C3;</a> <a href="#array" title="Jump back to the TOC.">&#x24C9;</a></p>
 
 <p>The inverse of <code class="prettyprint">_.toPairs</code>; this method returns an object composed
-from key-value <code class="prettyprint">pairs</code>.</p>
+from key-value <code class="prettyprint">pairs</code>. See <code class="prettyprint">_.zipObject</code></p>
+
+<h4 id="underscore">Underscore</h4>
+
+<p><code> _.object(list, [values]) </code></p>
 
 <h4 id="since">Since</h4>
 
@@ -2162,6 +2165,10 @@ for equality comparisons, in which only the first occurrence of each element
 is kept. The order of result values is determined by the order they occur
 in the array.</p>
 
+<h4 id="underscore">Underscore</h4>
+
+<p><code>_.uniq(array, [isSorted], [iteratee])</code> Alias: unique </p>
+
 <h4 id="since">Since</h4>
 
 <p>0.1.0</p>
@@ -2450,11 +2457,21 @@ second elements of the given arrays, and so on.</p>
 <h2 id="_-zipobject-props-values"><a name="_zipobjectprops-values"><code>_.zipObject([props=[]], [values=[]])</code></a></h2>
 <pre class="highlight javascript"><code><span class="nx">_</span><span class="p">.</span><span class="nx">zipObject</span><span class="p">([</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]);</span>
 <span class="c1">// =&gt; { 'a': 1, 'b': 2 }</span>
+
+<span class="nx">_</span><span class="p">.</span><span class="nx">object</span><span class="p">([</span><span class="s1">'moe'</span><span class="p">,</span> <span class="s1">'larry'</span><span class="p">,</span> <span class="s1">'curly'</span><span class="p">],</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]);</span>
+<span class="o">=&gt;</span> <span class="p">{</span><span class="na">moe</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="na">larry</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span> <span class="na">curly</span><span class="p">:</span> <span class="mi">50</span><span class="p">}</span>
+
+<span class="nx">_</span><span class="p">.</span><span class="nx">object</span><span class="p">([[</span><span class="s1">'moe'</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="p">[</span><span class="s1">'larry'</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span> <span class="p">[</span><span class="s1">'curly'</span><span class="p">,</span> <span class="mi">50</span><span class="p">]]);</span>
+<span class="o">=&gt;</span> <span class="p">{</span><span class="na">moe</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="na">larry</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span> <span class="na">curly</span><span class="p">:</span> <span class="mi">50</span><span class="p">}</span>
 </code></pre>
 <p><a href="https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L8672" title="View in source">&#x24C8;</a> <a href="https://www.npmjs.com/package/lodash.zipobject" title="See the npm package">&#x24C3;</a> <a href="#array" title="Jump back to the TOC.">&#x24C9;</a></p>
 
 <p>This method is like <code class="prettyprint">_.fromPairs</code> except that it accepts two arrays,
 one of property identifiers and one of corresponding values.</p>
+
+<h4 id="underscore">Underscore</h4>
+
+<p><code> _.object(list, [values]) </code></p>
 
 <h4 id="since">Since</h4>
 
@@ -2594,6 +2611,10 @@ invoked with three arguments: <em>(value, index|key, collection)</em>.
 <a href="https://en.wikipedia.org/wiki/Vacuous_truth">everything is true</a> of
 elements of empty collections.</p>
 
+<h4 id="underscore">Underscore</h4>
+
+<p><code> _.every(list, [predicate], [context])</code> Alias: all </p>
+
 <h4 id="since">Since</h4>
 
 <p>0.1.0</p>
@@ -2641,6 +2662,14 @@ arguments: <em>(value, index|key, collection)</em>.
 <br>
 <strong>Note:</strong> Unlike <code class="prettyprint">_.remove</code>, this method returns a new array.</p>
 
+<h3 id="underscore">Underscore</h3>
+
+<p><code><em>.filter(list, predicate, [context])</code> Alias: select <br> <br>
+<code></em>.where(list, properties)</code> <br> 
+* Looks through each value in the list, returning an array of all the values that contain all of the key-value pairs listed in properties.<br> <br>
+<code>_.findWhere(list, properties)</code> <br>
+* Looks through the list and returns the first value that matches all of the key-value pairs listed in properties.  If no match is found, or if list is empty, undefined will be returned. <br></p>
+
 <h4 id="since">Since</h4>
 
 <p>0.1.0</p>
@@ -2679,12 +2708,20 @@ arguments: <em>(value, index|key, collection)</em>.
 <span class="c1">// The `_.property` iteratee shorthand.</span>
 <span class="nx">_</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">users</span><span class="p">,</span> <span class="s1">'active'</span><span class="p">);</span>
 <span class="c1">// =&gt; object for 'barney'</span>
+
+<span class="c1">//Underscore</span>
+<span class="kd">var</span> <span class="nx">even</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">find</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">num</span><span class="p">){</span> <span class="k">return</span> <span class="nx">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span> <span class="p">});</span>
+<span class="o">=&gt;</span> <span class="mi">2</span>
 </code></pre>
 <p><a href="https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L9229" title="View in source">&#x24C8;</a> <a href="https://www.npmjs.com/package/lodash.find" title="See the npm package">&#x24C3;</a> <a href="#array" title="Jump back to the TOC.">&#x24C9;</a></p>
 
 <p>Iterates over elements of <code class="prettyprint">collection</code>, returning the first element
 <code class="prettyprint">predicate</code> returns truthy for. The predicate is invoked with three
 arguments: <em>(value, index|key, collection)</em>.</p>
+
+<h4 id="underscore">Underscore</h4>
+
+<p><code>_.find(list, predicate, [context])</code> Alias: detect </p>
 
 <h4 id="since">Since</h4>
 
@@ -2847,6 +2884,10 @@ Iteratee functions may exit iteration early by explicitly returning <code class=
 property are iterated like arrays. To avoid this behavior use <code class="prettyprint">_.forIn</code>
 or <code class="prettyprint">_.forOwn</code> for object iteration.</p>
 
+<h4 id="underscore">Underscore</h4>
+
+<p><code>_.each(list, iteratee, [context])</code> Alias: forEach </p>
+
 <h4 id="since">Since</h4>
 
 <p>0.1.0</p>
@@ -2945,6 +2986,10 @@ key. The iteratee is invoked with one argument: <em>(value)</em>.</p>
 
 <span class="nx">_</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s1">'abcd'</span><span class="p">,</span> <span class="s1">'bc'</span><span class="p">);</span>
 <span class="c1">// =&gt; true</span>
+
+<span class="c1">//Underscore</span>
+<span class="nx">_</span><span class="p">.</span><span class="nx">contains</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">3</span><span class="p">);</span>
+<span class="o">=&gt;</span> <span class="kc">true</span>
 </code></pre>
 <p><a href="https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L9448" title="View in source">&#x24C8;</a> <a href="https://www.npmjs.com/package/lodash.includes" title="See the npm package">&#x24C3;</a> <a href="#array" title="Jump back to the TOC.">&#x24C9;</a></p>
 
@@ -2953,6 +2998,10 @@ checked for a substring of <code class="prettyprint">value</code>, otherwise
 <a href="http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero"><code class="prettyprint">SameValueZero</code></a>
 is used for equality comparisons. If <code class="prettyprint">fromIndex</code> is negative, it&rsquo;s used as
 the offset from the end of <code class="prettyprint">collection</code>.</p>
+
+<h4 id="underscore">Underscore</h4>
+
+<p><code>.contains(list, value, [fromIndex])</code> Alias: includes </p>
 
 <h4 id="since">Since</h4>
 
@@ -3025,6 +3074,10 @@ each element of <code class="prettyprint">collection</code> thru <code class="pr
 each key is the last element responsible for generating the key. The
 iteratee is invoked with one argument: <em>(value)</em>.</p>
 
+<h4 id="underscore">Underscore</h4>
+
+<p>See <code>_.object(list, [values]) </code></p>
+
 <h4 id="since">Since</h4>
 
 <p>4.0.0</p>
@@ -3078,6 +3131,10 @@ The guarded methods are:<br>
 <code class="prettyprint">fill</code>, <code class="prettyprint">invert</code>, <code class="prettyprint">parseInt</code>, <code class="prettyprint">random</code>, <code class="prettyprint">range</code>, <code class="prettyprint">rangeRight</code>, <code class="prettyprint">repeat</code>,
 <code class="prettyprint">sampleSize</code>, <code class="prettyprint">slice</code>, <code class="prettyprint">some</code>, <code class="prettyprint">sortBy</code>, <code class="prettyprint">split</code>, <code class="prettyprint">take</code>, <code class="prettyprint">takeRight</code>,
 <code class="prettyprint">template</code>, <code class="prettyprint">trim</code>, <code class="prettyprint">trimEnd</code>, <code class="prettyprint">trimStart</code>, and <code class="prettyprint">words</code></p>
+
+<h4 id="underscore">Underscore</h4>
+
+<p><code>_.map(list, iteratee, [context]) </code> Alias: collect </p>
 
 <h4 id="since">Since</h4>
 
@@ -3209,6 +3266,10 @@ The guarded methods are:<br>
 <code class="prettyprint">assign</code>, <code class="prettyprint">defaults</code>, <code class="prettyprint">defaultsDeep</code>, <code class="prettyprint">includes</code>, <code class="prettyprint">merge</code>, <code class="prettyprint">orderBy</code>,
 and <code class="prettyprint">sortBy</code></p>
 
+<h4 id="underscore">Underscore</h4>
+
+<p><code>_.reduce(list, iteratee, [memo], [context])</code> Aliases: inject, foldl</p>
+
 <h4 id="since">Since</h4>
 
 <p>0.1.0</p>
@@ -3239,6 +3300,10 @@ and <code class="prettyprint">sortBy</code></p>
 
 <p>This method is like <code class="prettyprint">_.reduce</code> except that it iterates over elements of
 <code class="prettyprint">collection</code> from right to left.</p>
+
+<h4 id="underscore">Underscore</h4>
+
+<p><code>_.reduceRight(list, iteratee, memo, [context])</code> Alias: foldr </p>
 
 <h4 id="since">Since</h4>
 
@@ -3436,6 +3501,10 @@ values or the number of own enumerable string keyed properties for objects.</p>
 <p>Checks if <code class="prettyprint">predicate</code> returns truthy for <strong>any</strong> element of <code class="prettyprint">collection</code>.
 Iteration is stopped once <code class="prettyprint">predicate</code> returns truthy. The predicate is
 invoked with three arguments: <em>(value, index|key, collection)</em>.</p>
+
+<h4 id="underscore">Underscore</h4>
+
+<p><code>_.some(list, [predicate], [context]) </code> Alias: any</p>
 
 <h4 id="since">Since</h4>
 
@@ -6857,6 +6926,11 @@ Subsequent sources overwrite property assignments of previous sources.
 <strong>Note:</strong> This method mutates <code class="prettyprint">object</code> and is loosely based on
 <a href="https://mdn.io/Object/assign"><code class="prettyprint">Object.assign</code></a>.</p>
 
+<h3 id="underscore">Underscore</h3>
+
+<p><code>_.extendOwn(destination, *sources) </code>Alias: assign <br>
+Like extend, but only copies own properties over to the destination object.</p>
+
 <h4 id="since">Since</h4>
 
 <p>0.10.0</p>
@@ -6899,9 +6973,8 @@ inherited source properties.
 
 <h4 id="underscore">Underscore</h4>
 
-<p>_.extendOwn(destination, *sources)
-Alias: assign
-Like Underscore&rsquo;s extend, but only copies own properties over to the destination object.</p>
+<p><code>_.extend(destination, *sources) </code>
+Copes own and inherited properties to destination object.</p>
 
 <h4 id="since">Since</h4>
 
@@ -7486,6 +7559,10 @@ enumerable properties of <code class="prettyprint">object</code>.</p>
 
 <p>Checks if <code class="prettyprint">path</code> is a direct property of <code class="prettyprint">object</code>.</p>
 
+<h3 id="underscore">Underscore</h3>
+
+<p><code>_.has(object, key) </code></p>
+
 <h4 id="since">Since</h4>
 
 <p>0.1.0</p>
@@ -7644,6 +7721,9 @@ with one argument: <em>(value)</em>.</p>
 
 <span class="nx">_</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="s1">'hi'</span><span class="p">);</span>
 <span class="c1">// =&gt; ['0', '1']</span>
+
+<span class="nx">_</span><span class="p">.</span><span class="nx">keys</span><span class="p">({</span><span class="na">one</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">two</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="na">three</span><span class="p">:</span> <span class="mi">3</span><span class="p">});</span>
+<span class="o">=&gt;</span> <span class="p">[</span><span class="s2">"one"</span><span class="p">,</span> <span class="s2">"two"</span><span class="p">,</span> <span class="s2">"three"</span><span class="p">]</span>
 </code></pre>
 <p><a href="https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L13282" title="View in source">&#x24C8;</a> <a href="https://www.npmjs.com/package/lodash.keys" title="See the npm package">&#x24C3;</a> <a href="#array" title="Jump back to the TOC.">&#x24C9;</a></p>
 
@@ -7653,6 +7733,10 @@ with one argument: <em>(value)</em>.</p>
 <strong>Note:</strong> Non-object values are coerced to objects. See the
 <a href="http://ecma-international.org/ecma-262/7.0/#sec-object.keys">ES spec</a>
 for more details.</p>
+
+<h4 id="underscore">Underscore</h4>
+
+<p><code>_.keys(object)</code></p>
 
 <h4 id="since">Since</h4>
 
@@ -9737,7 +9821,7 @@ For more information on Chrome extension sandboxes see
 </code></pre>
 <p><a href="https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L15042" title="View in source">&#x24C8;</a> <a href="https://www.npmjs.com/package/lodash.truncate" title="See the npm package">&#x24C3;</a> <a href="#array" title="Jump back to the TOC.">&#x24C9;</a></p>
 
-<p>Truncates <code class="prettyprint">string</code> if it&rsquo;s longer than the given maximum string length.
+<p>Truncates <code class="prettyprint">string</code> if its longer than the given maximum string length.
 The last characters of the truncated string are replaced with the omission
 string which defaults to &ldquo;&hellip;&rdquo;.</p>
 
@@ -10119,11 +10203,23 @@ invocation is supplied the return value of the previous.</p>
 <span class="kd">var</span> <span class="nx">addSquare</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">flowRight</span><span class="p">([</span><span class="nx">square</span><span class="p">,</span> <span class="nx">_</span><span class="p">.</span><span class="nx">add</span><span class="p">]);</span>
 <span class="nx">addSquare</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
 <span class="c1">// =&gt; 9</span>
+
+<span class="c1">//UnderScore</span>
+<span class="kd">var</span> <span class="nx">greet</span>    <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">){</span> <span class="k">return</span> <span class="s2">"hi: "</span> <span class="o">+</span> <span class="nx">name</span><span class="p">;</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">exclaim</span>  <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">statement</span><span class="p">){</span> <span class="k">return</span> <span class="nx">statement</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span> <span class="o">+</span> <span class="s2">"!"</span><span class="p">;</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">welcome</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">compose</span><span class="p">(</span><span class="nx">greet</span><span class="p">,</span> <span class="nx">exclaim</span><span class="p">);</span>
+<span class="nx">welcome</span><span class="p">(</span><span class="s1">'moe'</span><span class="p">);</span>
+<span class="o">=&gt;</span> <span class="s1">'hi: MOE!'</span>
 </code></pre>
 <p><a href="https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L15435" title="View in source">&#x24C8;</a> <a href="https://www.npmjs.com/package/lodash.flowright" title="See the npm package">&#x24C3;</a> <a href="#array" title="Jump back to the TOC.">&#x24C9;</a></p>
 
 <p>This method is like <code class="prettyprint">_.flow</code> except that it creates a function that
 invokes the given functions from right to left.</p>
+
+<h4 id="underscore">Underscore</h4>
+
+<p><code> _.compose(*functions)  </code>
+Returns the composition of a list of functions, where each function consumes the return value of the function that follows. In math terms, composing the functions f(), g(), and h() produces f(g(h())).</p>
 
 <h4 id="since">Since</h4>
 
@@ -10202,6 +10298,10 @@ function. If <code class="prettyprint">func</code> is a property name, the creat
 property value for a given element. If <code class="prettyprint">func</code> is an array or object, the
 created function returns <code class="prettyprint">true</code> for elements that contain the equivalent
 source properties, otherwise it returns <code class="prettyprint">false</code>.</p>
+
+<h4 id="underscore">Underscore</h4>
+
+<p><code> _.iteratee(value, [context])  </code></p>
 
 <h4 id="since">Since</h4>
 
@@ -10655,11 +10755,15 @@ the value at a given path of <code class="prettyprint">object</code>.</p>
 <p>Creates an array of numbers <em>(positive and/or negative)</em> progressing from
 <code class="prettyprint">start</code> up to, but not including, <code class="prettyprint">end</code>. A step of <code class="prettyprint">-1</code> is used if a negative
 <code class="prettyprint">start</code> is specified without an <code class="prettyprint">end</code> or <code class="prettyprint">step</code>. If <code class="prettyprint">end</code> is not specified,
-it&rsquo;s set to <code class="prettyprint">start</code> with <code class="prettyprint">start</code> then set to <code class="prettyprint">0</code>.
+it is set to <code class="prettyprint">start</code> with <code class="prettyprint">start</code> then set to <code class="prettyprint">0</code>.
 <br>
 <br>
 <strong>Note:</strong> JavaScript follows the IEEE-754 standard for resolving
 floating-point values which can produce unexpected results.</p>
+
+<h4 id="underscore">Underscore</h4>
+
+<p><code>_.range([start=0], end, [step=1])</code></p>
 
 <h4 id="since">Since</h4>
 
