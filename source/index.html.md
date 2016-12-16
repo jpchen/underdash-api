@@ -424,7 +424,9 @@ Creates an array of elements split into groups the length of `size`.
 If `array` can't be split evenly, the final chunk will be the remaining
 elements.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -453,7 +455,9 @@ _.compact([0, 1, false, 2, '', 3]);
 Creates an array with all falsey values removed. The values `false`, `null`,
 `0`, `""`, `undefined`, and `NaN` are falsey.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -482,7 +486,9 @@ console.log(array);
 Creates a new array concatenating `array` with any additional arrays
 and/or values.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -515,7 +521,9 @@ determined by the first array.
 <br>
 **Note:** Unlike `_.pullAll`, this method returns a new array.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -553,7 +561,9 @@ determined by the first array. The iteratee is invoked with one argument:
 <br>
 **Note:** Unlike `_.pullAllBy`, this method returns a new array.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -589,7 +599,9 @@ is invoked with two arguments: *(arrVal, othVal)*.
 <br>
 **Note:** Unlike `_.pullAllWith`, this method returns a new array.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -626,7 +638,9 @@ _.drop([1, 2, 3], 0);
 
 Creates a slice of `array` with `n` elements dropped from the beginning.
 
-#### Since
+#### Underscore
+
+### Since
 0.5.0
 
 #### Arguments
@@ -662,7 +676,9 @@ _.dropRight([1, 2, 3], 0);
 
 Creates a slice of `array` with `n` elements dropped from the end.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -710,7 +726,9 @@ Creates a slice of `array` excluding elements dropped from the end.
 Elements are dropped until `predicate` returns falsey. The predicate is
 invoked with three arguments: *(value, index, array)*.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -755,7 +773,9 @@ Creates a slice of `array` excluding elements dropped from the beginning.
 Elements are dropped until `predicate` returns falsey. The predicate is
 invoked with three arguments: *(value, index, array)*.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -795,7 +815,9 @@ including, `end`.
 <br>
 **Note:** This method mutates `array`.
 
-#### Since
+#### Underscore
+
+### Since
 3.2.0
 
 #### Arguments
@@ -843,7 +865,9 @@ _.findIndex(users, 'active');
 This method is like `_.find` except that it returns the index of the first
 element `predicate` returns truthy for instead of the element itself.
 
-#### Since
+#### Underscore
+
+### Since
 1.1.0
 
 #### Arguments
@@ -890,7 +914,9 @@ _.findLastIndex(users, 'active');
 This method is like `_.findIndex` except that it iterates over elements
 of `collection` from right to left.
 
-#### Since
+#### Underscore
+
+### Since
 2.0.0
 
 #### Arguments
@@ -918,7 +944,11 @@ _.flatten([1, [2, [3, [4]], 5]]);
 
 Flattens `array` a single level deep.
 
-#### Since
+#### Underscore
+<code>_.flatten(array, [shallow])  </code><br>
+Flattens a nested array (the nesting can be to any depth). If you pass shallow, the array will only be flattened a single level.
+
+### Since
 0.1.0
 
 #### Arguments
@@ -944,7 +974,11 @@ _.flattenDeep([1, [2, [3, [4]], 5]]);
 
 Recursively flattens `array`.
 
-#### Since
+#### Underscore
+<code>_.flatten(array, [shallow])  </code><br>
+Flattens a nested array (the nesting can be to any depth). If you pass shallow, the array will only be flattened a single level.
+
+### Since
 3.0.0
 
 #### Arguments
@@ -975,7 +1009,9 @@ _.flattenDepth(array, 2);
 
 Recursively flatten `array` up to `depth` times.
 
-#### Since
+#### Underscore
+
+### Since
 4.4.0
 
 #### Arguments
@@ -1036,7 +1072,10 @@ _.head([]);
 
 Gets the first element of `array`.
 
-#### Since
+#### Underscore
+<code>_.first(array, [n])</code> Alias: head, take 
+
+### Since
 0.1.0
 
 #### Aliases
@@ -1072,7 +1111,9 @@ using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevalu
 for equality comparisons. If `fromIndex` is negative, it's used as the
 offset from the end of `array`.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -1100,7 +1141,9 @@ _.initial([1, 2, 3]);
 
 Gets all but the last element of `array`.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -1129,7 +1172,9 @@ using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevalu
 for equality comparisons. The order and references of result values are
 determined by the first array.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -1163,7 +1208,9 @@ by which they're compared. The order and references of result values are
 determined by the first array. The iteratee is invoked with one argument:<br>
 *(value)*.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -1196,7 +1243,9 @@ which is invoked to compare elements of `arrays`. The order and references
 of result values are determined by the first array. The comparator is
 invoked with two arguments: *(arrVal, othVal)*.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -1223,7 +1272,9 @@ _.join(['a', 'b', 'c'], '~');
 
 Converts all elements in `array` into a string separated by `separator`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -1250,7 +1301,9 @@ _.last([1, 2, 3]);
 
 Gets the last element of `array`.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -1281,7 +1334,9 @@ _.lastIndexOf([1, 2, 1, 2], 2, 2);
 This method is like `_.indexOf` except that it iterates over elements of
 `array` from right to left.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -1315,7 +1370,9 @@ _.nth(array, -2);
 Gets the element at index `n` of `array`. If `n` is negative, the nth
 element from the end is returned.
 
-#### Since
+#### Underscore
+
+### Since
 4.11.0
 
 #### Arguments
@@ -1351,7 +1408,9 @@ for equality comparisons.
 **Note:** Unlike `_.without`, this method mutates `array`. Use `_.remove`
 to remove elements from an array by predicate.
 
-#### Since
+#### Underscore
+
+### Since
 2.0.0
 
 #### Arguments
@@ -1384,7 +1443,9 @@ This method is like `_.pull` except that it accepts an array of values to remove
 <br>
 **Note:** Unlike `_.difference`, this method mutates `array`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -1419,7 +1480,9 @@ by which they're compared. The iteratee is invoked with one argument: *(value)*.
 <br>
 **Note:** Unlike `_.differenceBy`, this method mutates `array`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -1455,7 +1518,9 @@ invoked with two arguments: *(arrVal, othVal)*.
 <br>
 **Note:** Unlike `_.differenceWith`, this method mutates `array`.
 
-#### Since
+#### Underscore
+
+### Since
 4.6.0
 
 #### Arguments
@@ -1493,7 +1558,9 @@ array of removed elements.
 <br>
 **Note:** Unlike `_.at`, this method mutates `array`.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -1534,7 +1601,9 @@ with three arguments: *(value, index, array)*.
 **Note:** Unlike `_.filter`, this method mutates `array`. Use `_.pull`
 to pull elements from an array by value.
 
-#### Since
+#### Underscore
+
+### Since
 2.0.0
 
 #### Arguments
@@ -1571,7 +1640,9 @@ element becomes the second to last, and so on.
 **Note:** This method mutates `array` and is based on
 [`Array#reverse`](https://mdn.io/Array/reverse).
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -1602,7 +1673,9 @@ Creates a slice of `array` from `start` up to, but not including, `end`.
 [`Array#slice`](https://mdn.io/Array/slice) to ensure dense arrays are
 returned.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -1625,7 +1698,9 @@ returned.
 Uses a binary search to determine the lowest index at which `value`
 should be inserted into `array` in order to maintain its sort order.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -1660,7 +1735,9 @@ This method is like `_.sortedIndex` except that it accepts `iteratee`
 which is invoked for `value` and each element of `array` to compute their
 sort ranking. The iteratee is invoked with one argument: *(value)*.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -1689,7 +1766,9 @@ _.sortedIndexOf([4, 5, 5, 5, 6], 5);
 This method is like `_.indexOf` except that it performs a binary
 search on a sorted `array`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -1718,7 +1797,9 @@ This method is like `_.sortedIndex` except that it returns the highest
 index at which `value` should be inserted into `array` in order to
 maintain its sort order.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -1753,7 +1834,9 @@ This method is like `_.sortedLastIndex` except that it accepts `iteratee`
 which is invoked for `value` and each element of `array` to compute their
 sort ranking. The iteratee is invoked with one argument: *(value)*.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -1782,7 +1865,9 @@ _.sortedLastIndexOf([4, 5, 5, 5, 6], 5);
 This method is like `_.lastIndexOf` except that it performs a binary
 search on a sorted `array`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -1810,7 +1895,9 @@ _.sortedUniq([1, 1, 2]);
 This method is like `_.uniq` except that it's designed and optimized
 for sorted arrays.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -1837,7 +1924,9 @@ _.sortedUniqBy([1.1, 1.2, 2.3, 2.4], Math.floor);
 This method is like `_.uniqBy` except that it's designed and optimized
 for sorted arrays.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -1859,12 +1948,19 @@ for sorted arrays.
 ```javascript
 _.tail([1, 2, 3]);
 // => [2, 3]
+
+//Underscore
+_.rest([5, 4, 3, 2, 1]);
+=> [4, 3, 2, 1]
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L8156 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.tail "See the npm package") [&#x24C9;][1]
 
 Gets all but the first element of `array`.
 
-#### Since
+#### Underscore
+<code>_.rest(array, [index])</code> Alias: tail, drop 
+
+### Since
 4.0.0
 
 #### Arguments
@@ -1894,12 +1990,20 @@ _.take([1, 2, 3], 5);
 
 _.take([1, 2, 3], 0);
 // => []
+
+//Underscore
+_.first([5, 4, 3, 2, 1]);
+=> 5
+
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L8186 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.take "See the npm package") [&#x24C9;][1]
 
 Creates a slice of `array` with `n` elements taken from the beginning.
 
-#### Since
+#### Underscore
+<code>_.first(array, [n])</code> Alias: head, take 
+
+### Since
 0.1.0
 
 #### Arguments
@@ -1935,7 +2039,9 @@ _.takeRight([1, 2, 3], 0);
 
 Creates a slice of `array` with `n` elements taken from the end.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -1982,7 +2088,9 @@ Creates a slice of `array` with elements taken from the end. Elements are
 taken until `predicate` returns falsey. The predicate is invoked with
 three arguments: *(value, index, array)*.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -2029,7 +2137,9 @@ Creates a slice of `array` with elements taken from the beginning. Elements
 are taken until `predicate` returns falsey. The predicate is invoked with
 three arguments: *(value, index, array)*.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -2058,7 +2168,9 @@ Creates an array of unique values, in order, from all given arrays using
 [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
 for equality comparisons.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -2092,7 +2204,9 @@ which uniqueness is computed. Result values are chosen from the first
 array in which the value occurs. The iteratee is invoked with one argument:<br>
 *(value)*.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -2125,7 +2239,9 @@ is invoked to compare elements of `arrays`. Result values are chosen from
 the first array in which the value occurs. The comparator is invoked
 with two arguments: *(arrVal, othVal)*.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -2184,6 +2300,10 @@ _.uniqBy([2.1, 1.2, 2.3], Math.floor);
 // The `_.property` iteratee shorthand.
 _.uniqBy([{ 'x': 1 }, { 'x': 2 }, { 'x': 1 }], 'x');
 // => [{ 'x': 1 }, { 'x': 2 }]
+
+//Underscore
+.uniq([1, 2, 1, 4, 1, 3]);
+=> [1, 2, 4, 3]
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L8434 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.uniqby "See the npm package") [&#x24C9;][1]
 
@@ -2193,7 +2313,11 @@ uniqueness is computed. The order of result values is determined by the
 order they occur in the array. The iteratee is invoked with one argument:<br>
 *(value)*.
 
-#### Since
+#### Underscore
+<code>_.uniq(array, [isSorted], [iteratee])</code> Alias: unique <br>
+Produces a duplicate-free version of the array, using === to test object equality. In particular only the first occurence of each value is kept. If you know in advance that the array is sorted, passing true for isSorted will run a much faster algorithm. If you want to compute unique items based on a transformation, pass an iteratee function.
+
+### Since
 4.0.0
 
 #### Arguments
@@ -2225,7 +2349,9 @@ is invoked to compare elements of `array`. The order of result values is
 determined by the order they occur in the array.The comparator is invoked
 with two arguments: *(arrVal, othVal)*.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -2257,7 +2383,9 @@ This method is like `_.zip` except that it accepts an array of grouped
 elements and creates an array regrouping the elements to their pre-zip
 configuration.
 
-#### Since
+#### Underscore
+
+### Since
 1.2.0
 
 #### Arguments
@@ -2288,7 +2416,9 @@ This method is like `_.unzip` except that it accepts `iteratee` to specify
 how regrouped values should be combined. The iteratee is invoked with the
 elements of each group: *(...group)*.
 
-#### Since
+#### Underscore
+
+### Since
 3.8.0
 
 #### Arguments
@@ -2320,7 +2450,9 @@ for equality comparisons.
 <br>
 **Note:** Unlike `_.pull`, this method returns a new array.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -2350,7 +2482,9 @@ Creates an array of unique values that is the
 of the given arrays. The order of result values is determined by the order
 they occur in the arrays.
 
-#### Since
+#### Underscore
+
+### Since
 2.4.0
 
 #### Arguments
@@ -2384,7 +2518,9 @@ which by which they're compared. The order of result values is determined
 by the order they occur in the arrays. The iteratee is invoked with one
 argument: *(value)*.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -2417,7 +2553,9 @@ invoked to compare elements of `arrays`. The order of result values is
 determined by the order they occur in the arrays. The comparator is invoked
 with two arguments: *(arrVal, othVal)*.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -2446,7 +2584,9 @@ Creates an array of grouped elements, the first of which contains the
 first elements of the given arrays, the second of which contains the
 second elements of the given arrays, and so on.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -2509,7 +2649,9 @@ _.zipObjectDeep(['a.b[0].c', 'a.b[1].d'], [1, 2]);
 
 This method is like `_.zipObject` except that it supports property paths.
 
-#### Since
+#### Underscore
+
+### Since
 4.1.0
 
 #### Arguments
@@ -2540,7 +2682,9 @@ This method is like `_.zip` except that it accepts `iteratee` to specify
 how grouped values should be combined. The iteratee is invoked with the
 elements of each group: *(...group)*.
 
-#### Since
+#### Underscore
+
+### Since
 3.8.0
 
 #### Arguments
@@ -2580,7 +2724,9 @@ each element of `collection` thru `iteratee`. The corresponding value of
 each key is the number of times the key was returned by `iteratee`. The
 iteratee is invoked with one argument: *(value)*.
 
-#### Since
+#### Underscore
+
+### Since
 0.5.0
 
 #### Arguments
@@ -2776,7 +2922,9 @@ _.findLast([1, 2, 3, 4], function(n) {
 This method is like `_.find` except that it iterates over elements of
 `collection` from right to left.
 
-#### Since
+#### Underscore
+
+### Since
 2.0.0
 
 #### Arguments
@@ -2810,7 +2958,9 @@ Creates a flattened array of values by running each element in `collection`
 thru `iteratee` and flattening the mapped results. The iteratee is invoked
 with three arguments: *(value, index|key, collection)*.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -2842,7 +2992,9 @@ _.flatMapDeep([1, 2], duplicate);
 This method is like `_.flatMap` except that it recursively flattens the
 mapped results.
 
-#### Since
+#### Underscore
+
+### Since
 4.7.0
 
 #### Arguments
@@ -2874,7 +3026,9 @@ _.flatMapDepth([1, 2], duplicate, 2);
 This method is like `_.flatMap` except that it recursively flattens the
 mapped results up to `depth` times.
 
-#### Since
+#### Underscore
+
+### Since
 4.7.0
 
 #### Arguments
@@ -2952,7 +3106,9 @@ _.forEachRight([1, 2], function(value) {
 This method is like `_.forEach` except that it iterates over elements of
 `collection` from right to left.
 
-#### Since
+#### Underscore
+
+### Since
 2.0.0
 
 #### Aliases
@@ -2990,7 +3146,9 @@ is determined by the order they occur in `collection`. The corresponding
 value of each key is an array of elements responsible for generating the
 key. The iteratee is invoked with one argument: *(value)*.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -3063,6 +3221,10 @@ _.invokeMap([[5, 1, 7], [3, 2, 1]], 'sort');
 
 _.invokeMap([123, 456], String.prototype.split, '');
 // => [['1', '2', '3'], ['4', '5', '6']]
+
+//Underscore
+_.invoke([[5, 1, 7], [3, 2, 1]], 'sort');
+=> [[1, 5, 7], [1, 2, 3]]
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L9484 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.invokemap "See the npm package") [&#x24C9;][1]
 
@@ -3071,7 +3233,10 @@ an array of the results of each invoked method. Any additional arguments
 are provided to each invoked method. If `path` is a function, it's invoked
 for, and `this` bound to, each element in `collection`.
 
-#### Since
+#### Underscore
+<code>_.invoke(list, methodName, *arguments)  </code>
+
+### Since
 4.0.0
 
 #### Arguments
@@ -3104,6 +3269,15 @@ _.keyBy(array, function(o) {
 
 _.keyBy(array, 'dir');
 // => { 'left': { 'dir': 'left', 'code': 97 }, 'right': { 'dir': 'right', 'code': 100 } }
+
+//Underscore
+var stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly', age: 60}];
+_.indexBy(stooges, 'age');
+=> {
+  "40": {name: 'moe', age: 40},
+  "50": {name: 'larry', age: 50},
+  "60": {name: 'curly', age: 60}
+}
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L9523 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.keyby "See the npm package") [&#x24C9;][1]
 
@@ -3113,6 +3287,8 @@ each key is the last element responsible for generating the key. The
 iteratee is invoked with one argument: *(value)*.
 
 #### Underscore
+<code> _.indexBy(list, iteratee, [context]) </code> <br>
+Given a list, and an iteratee function that returns a key for each element in the list (or a property name), returns an object with an index of each item. Just like groupBy, but for when you know your keys are unique. <br> <br>
 See <code>_.object(list, [values]) </code>
 
 #### Since
@@ -3153,6 +3329,11 @@ var users = [
 // The `_.property` iteratee shorthand.
 _.map(users, 'user');
 // => ['barney', 'fred']
+
+//Underscore
+var stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly', age: 60}];
+_.pluck(stooges, 'name');
+=> ["moe", "larry", "curly"]
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L9569 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.map "See the npm package") [&#x24C9;][1]
 
@@ -3172,7 +3353,10 @@ The guarded methods are:<br>
 `template`, `trim`, `trimEnd`, `trimStart`, and `words`
 
 #### Underscore
-<code>_.map(list, iteratee, [context]) </code> Alias: collect 
+<code>_.map(list, iteratee, [context]) </code> Alias: collect <br> 
+Also see: <code>_.pluck(list, propertyName)</code><br>
+A convenient version of what is perhaps the most common use-case for map: extracting a list of property values.
+
 
 #### Since
 0.1.0
@@ -3212,7 +3396,9 @@ orders of the iteratees to sort by. If `orders` is unspecified, all values
 are sorted in ascending order. Otherwise, specify an order of "desc" for
 descending or "asc" for ascending sort order of corresponding values.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -3261,7 +3447,9 @@ contains elements `predicate` returns truthy for, the second of which
 contains elements `predicate` returns falsey for. The predicate is
 invoked with one argument: *(value)*.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -3395,7 +3583,9 @@ _.reject(users, 'active');
 The opposite of `_.filter`; this method returns the elements of `collection`
 that `predicate` does **not** return truthy for.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -3422,7 +3612,9 @@ _.sample([1, 2, 3, 4]);
 
 Gets a random element from `collection`.
 
-#### Since
+#### Underscore
+
+### Since
 2.0.0
 
 #### Arguments
@@ -3452,7 +3644,9 @@ _.sampleSize([1, 2, 3], 4);
 Gets `n` random elements at unique keys from `collection` up to the
 size of `collection`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -3480,7 +3674,9 @@ _.shuffle([1, 2, 3, 4]);
 Creates an array of shuffled values, using a version of the
 [Fisher-Yates shuffle](https://en.wikipedia.org/wiki/Fisher-Yates_shuffle).
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -3513,7 +3709,9 @@ _.size('pebbles');
 Gets the size of `collection` by returning its length for array-like
 values or the number of own enumerable string keyed properties for objects.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -3601,7 +3799,9 @@ running each element in a collection thru each iteratee. This method
 performs a stable sort, that is, it preserves the original sort order of
 equal elements. The iteratees are invoked with one argument: *(value)*.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -3637,7 +3837,9 @@ _.defer(function(stamp) {
 Gets the timestamp of the number of milliseconds that have elapsed since
 the Unix epoch *(1 January `1970 00`:00:00 UTC)*.
 
-#### Since
+#### Underscore
+
+### Since
 2.4.0
 
 #### Returns
@@ -3675,7 +3877,9 @@ _.forEach(saves, function(type) {
 The opposite of `_.before`; this method creates a function that invokes
 `func` once it's called `n` or more times.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -3703,7 +3907,9 @@ _.map(['6', '8', '10'], _.ary(parseInt, 1));
 Creates a function that invokes `func`, with up to `n` arguments,
 ignoring any additional arguments.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -3732,7 +3938,9 @@ Creates a function that invokes `func`, with the `this` binding and arguments
 of the created function, while it's called less than `n` times. Subsequent
 calls to the created function return the result of the last `func` invocation.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -3780,7 +3988,9 @@ may be used as a placeholder for partially applied arguments.
 **Note:** Unlike native `Function#bind`, this method doesn't set the "length"
 property of bound functions.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -3839,7 +4049,9 @@ for more details.
 The `_.bindKey.placeholder` value, which defaults to `_` in monolithic
 builds, may be used as a placeholder for partially applied arguments.
 
-#### Since
+#### Underscore
+
+### Since
 0.10.0
 
 #### Arguments
@@ -3894,7 +4106,9 @@ may be used as a placeholder for provided arguments.
 <br>
 **Note:** This method doesn't set the "length" property of curried functions.
 
-#### Since
+#### Underscore
+
+### Since
 2.0.0
 
 #### Arguments
@@ -3945,7 +4159,9 @@ builds, may be used as a placeholder for provided arguments.
 <br>
 **Note:** This method doesn't set the "length" property of curried functions.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -4007,7 +4223,9 @@ until to the next tick, similar to `setTimeout` with a timeout of `0`.
 See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
 for details over the differences between `_.debounce` and `_.throttle`.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -4041,7 +4259,9 @@ _.defer(function(text) {
 Defers invoking the `func` until the current call stack has cleared. Any
 additional arguments are provided to `func` when it's invoked.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -4071,7 +4291,9 @@ _.delay(function(text) {
 Invokes `func` after `wait` milliseconds. Any additional arguments are
 provided to `func` when it's invoked.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -4103,7 +4325,9 @@ flipped('a', 'b', 'c', 'd');
 
 Creates a function that invokes `func` with arguments reversed.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -4159,7 +4383,10 @@ constructor with one whose instances implement the
 [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
 method interface of `clear`, `delete`, `get`, `has`, and `set`.
 
-#### Since
+#### Underscore
+<code> _.memoize(function, [hashFunction]) </code>
+
+### Since
 0.1.0
 
 #### Arguments
@@ -4192,7 +4419,9 @@ Creates a function that negates the result of the predicate `func`. The
 `func` predicate is invoked with the `this` binding and arguments of the
 created function.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -4222,7 +4451,9 @@ Creates a function that is restricted to invoking `func` once. Repeat calls
 to the function return the value of the first invocation. The `func` is
 invoked with the `this` binding and arguments of the created function.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -4263,7 +4494,9 @@ func(10, 5);
 
 Creates a function that invokes `func` with its arguments transformed.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -4310,7 +4543,10 @@ builds, may be used as a placeholder for partially applied arguments.
 **Note:** This method doesn't set the "length" property of partially
 applied functions.
 
-#### Since
+#### Underscore
+<code>_.partial(function, *arguments) </code>
+
+### Since
 0.2.0
 
 #### Arguments
@@ -4356,7 +4592,9 @@ builds, may be used as a placeholder for partially applied arguments.
 **Note:** This method doesn't set the "length" property of partially
 applied functions.
 
-#### Since
+#### Underscore
+
+### Since
 1.0.0
 
 #### Arguments
@@ -4390,7 +4628,9 @@ to the specified `indexes` where the argument value at the first index is
 provided as the first argument, the argument value at the second index is
 provided as the second argument, and so on.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -4428,7 +4668,9 @@ an array.
 **Note:** This method is based on the
 [rest parameter](https://mdn.io/rest_parameters).
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -4475,7 +4717,9 @@ create function and an array of arguments much like
 **Note:** This method is based on the
 [spread operator](https://mdn.io/spread_operator).
 
-#### Since
+#### Underscore
+
+### Since
 3.2.0
 
 #### Arguments
@@ -4529,7 +4773,9 @@ until to the next tick, similar to `setTimeout` with a timeout of `0`.
 See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
 for details over the differences between `_.throttle` and `_.debounce`.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -4560,7 +4806,9 @@ _.map(['6', '8', '10'], _.unary(parseInt));
 Creates a function that accepts up to one argument, ignoring any
 additional arguments.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -4593,7 +4841,9 @@ argument. Any additional arguments provided to the function are appended
 to those provided to the `wrapper`. The wrapper is invoked with the `this`
 binding of the created function.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -4645,7 +4895,9 @@ console.log(_.castArray(array) === array);
 
 Casts `value` as an array if it's not one.
 
-#### Since
+#### Underscore
+
+### Since
 4.4.0
 
 #### Arguments
@@ -4669,6 +4921,10 @@ var objects = [{ 'a': 1 }, { 'b': 2 }];
 var shallow = _.clone(objects);
 console.log(shallow[0] === objects[0]);
 // => true
+
+//Underscore
+_.clone({name: 'moe'});
+=> {name: 'moe'}
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L11043 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.clone "See the npm package") [&#x24C9;][1]
 
@@ -4683,7 +4939,10 @@ arrays. The own enumerable properties of `arguments` objects are cloned
 as plain objects. An empty object is returned for uncloneable values such
 as error objects, functions, DOM nodes, and WeakMaps.
 
-#### Since
+#### Underscore
+<code>_.clone(object) </code>
+
+### Since
 0.1.0
 
 #### Arguments
@@ -4728,7 +4987,9 @@ console.log(deep[0] === objects[0]);
 
 This method is like `_.clone` except that it recursively clones `value`.
 
-#### Since
+#### Underscore
+
+### Since
 1.0.0
 
 #### Arguments
@@ -4750,7 +5011,9 @@ This method is like `_.clone` except that it recursively clones `value`.
 
 This method is like `_.cloneWith` except that it recursively clones `value`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -4792,7 +5055,9 @@ is invoked to produce the cloned value. If `customizer` returns `undefined`,
 cloning is handled by the method instead. The `customizer` is invoked with
 up to four arguments; *(value [, index|key, object, stack])*.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -4829,7 +5094,9 @@ properties of `source` with the corresponding property values of `object`.
 **Note:** This method is equivalent to `_.conforms` when `source` is
 partially applied.
 
-#### Since
+#### Underscore
+
+### Since
 4.14.0
 
 #### Arguments
@@ -4873,7 +5140,9 @@ Performs a
 [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
 comparison between two values to determine if they are equivalent.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -4906,7 +5175,9 @@ _.gt(1, 3);
 
 Checks if `value` is greater than `other`.
 
-#### Since
+#### Underscore
+
+### Since
 3.9.0
 
 #### Arguments
@@ -4939,7 +5210,9 @@ _.gte(1, 3);
 
 Checks if `value` is greater than or equal to `other`.
 
-#### Since
+#### Underscore
+
+### Since
 3.9.0
 
 #### Arguments
@@ -4969,7 +5242,9 @@ _.isArguments([1, 2, 3]);
 
 Checks if `value` is likely an `arguments` object.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -5004,7 +5279,9 @@ _.isArray(_.noop);
 
 Checks if `value` is classified as an `Array` object.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -5033,7 +5310,9 @@ _.isArrayBuffer(new Array(2));
 
 Checks if `value` is classified as an `ArrayBuffer` object.
 
-#### Since
+#### Underscore
+
+### Since
 4.3.0
 
 #### Arguments
@@ -5070,7 +5349,9 @@ Checks if `value` is array-like. A value is considered array-like if it's
 not a function and has a `value.length` that's an integer greater than or
 equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -5106,7 +5387,9 @@ _.isArrayLikeObject(_.noop);
 This method is like `_.isArrayLike` except that it also checks if `value`
 is an object.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -5135,7 +5418,9 @@ _.isBoolean(null);
 
 Checks if `value` is classified as a boolean primitive or object.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -5164,7 +5449,9 @@ _.isBuffer(new Uint8Array(2));
 
 Checks if `value` is a buffer.
 
-#### Since
+#### Underscore
+
+### Since
 4.3.0
 
 #### Arguments
@@ -5193,7 +5480,9 @@ _.isDate('Mon April 23 2012');
 
 Checks if `value` is classified as a `Date` object.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -5222,7 +5511,9 @@ _.isElement('<body>');
 
 Checks if `value` is likely a DOM element.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -5269,7 +5560,9 @@ Array-like values such as `arguments` objects, arrays, buffers, strings, or
 jQuery-like collections are considered empty if they have a `length` of `0`.
 Similarly, maps and sets are considered empty if they have a `size` of `0`.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -5309,7 +5602,9 @@ sets, strings, symbols, and typed arrays. `Object` objects are compared
 by their own, not inherited, enumerable properties. Functions and DOM
 nodes are compared by strict equality, i.e. `===`.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -5352,7 +5647,9 @@ is invoked to compare values. If `customizer` returns `undefined`, comparisons
 are handled by the method instead. The `customizer` is invoked with up to
 six arguments: *(objValue, othValue [, index|key, object, other, stack])*.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -5384,7 +5681,9 @@ _.isError(Error);
 Checks if `value` is an `Error`, `EvalError`, `RangeError`, `ReferenceError`,
 `SyntaxError`, `TypeError`, or `URIError` object.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -5423,7 +5722,9 @@ Checks if `value` is a finite primitive number.
 **Note:** This method is based on
 [`Number.isFinite`](https://mdn.io/Number/isFinite).
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -5452,7 +5753,9 @@ _.isFunction(/abc/);
 
 Checks if `value` is classified as a `Function` object.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -5491,7 +5794,9 @@ Checks if `value` is an integer.
 **Note:** This method is based on
 [`Number.isInteger`](https://mdn.io/Number/isInteger).
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -5530,7 +5835,9 @@ Checks if `value` is a valid array-like length.
 **Note:** This method is loosely based on
 [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -5559,7 +5866,9 @@ _.isMap(new WeakMap);
 
 Checks if `value` is classified as a `Map` object.
 
-#### Since
+#### Underscore
+
+### Since
 4.3.0
 
 #### Arguments
@@ -5600,7 +5909,9 @@ Partial comparisons will match empty array and empty object `source`
 values against any array or object value, respectively. See `_.isEqual`
 for a list of supported value comparisons.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -5643,7 +5954,9 @@ is invoked to compare values. If `customizer` returns `undefined`, comparisons
 are handled by the method instead. The `customizer` is invoked with five
 arguments: *(objValue, srcValue, index|key, object, source)*.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -5686,7 +5999,9 @@ Checks if `value` is `NaN`.
 global [`isNaN`](https://mdn.io/isNaN) which returns `true` for
 `undefined` and other non-number values.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -5724,7 +6039,9 @@ with little choice but to throw an error. Unfortunately, this also affects
 packages, like [babel-polyfill](https://www.npmjs.com/package/babel-polyfill),
 which rely on core-js.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -5756,7 +6073,9 @@ _.isNil(NaN);
 
 Checks if `value` is `null` or `undefined`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -5785,7 +6104,9 @@ _.isNull(void 0);
 
 Checks if `value` is `null`.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -5824,7 +6145,9 @@ Checks if `value` is classified as a `Number` primitive or object.
 **Note:** To exclude `Infinity`, `-Infinity`, and `NaN`, which are
 classified as numbers, use the `_.isFinite` method.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -5897,7 +6220,9 @@ _.isObjectLike(null);
 Checks if `value` is object-like. A value is object-like if it's not `null`
 and has a `typeof` result of "object".
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -5937,7 +6262,9 @@ _.isPlainObject(Object.create(null));
 Checks if `value` is a plain object, that is, an object created by the
 `Object` constructor or one with a `[[Prototype]]` of `null`.
 
-#### Since
+#### Underscore
+
+### Since
 0.8.0
 
 #### Arguments
@@ -5966,7 +6293,9 @@ _.isRegExp('/abc/');
 
 Checks if `value` is classified as a `RegExp` object.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -6006,7 +6335,9 @@ double precision number which isn't the result of a rounded unsafe integer.
 **Note:** This method is based on
 [`Number.isSafeInteger`](https://mdn.io/Number/isSafeInteger).
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -6035,7 +6366,9 @@ _.isSet(new WeakSet);
 
 Checks if `value` is classified as a `Set` object.
 
-#### Since
+#### Underscore
+
+### Since
 4.3.0
 
 #### Arguments
@@ -6064,7 +6397,9 @@ _.isString(1);
 
 Checks if `value` is classified as a `String` primitive or object.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -6093,7 +6428,9 @@ _.isSymbol('abc');
 
 Checks if `value` is classified as a `Symbol` primitive or object.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -6122,7 +6459,9 @@ _.isTypedArray([]);
 
 Checks if `value` is classified as a typed array.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -6151,7 +6490,9 @@ _.isUndefined(null);
 
 Checks if `value` is `undefined`.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -6180,7 +6521,9 @@ _.isWeakMap(new Map);
 
 Checks if `value` is classified as a `WeakMap` object.
 
-#### Since
+#### Underscore
+
+### Since
 4.3.0
 
 #### Arguments
@@ -6209,7 +6552,9 @@ _.isWeakSet(new Set);
 
 Checks if `value` is classified as a `WeakSet` object.
 
-#### Since
+#### Underscore
+
+### Since
 4.3.0
 
 #### Arguments
@@ -6241,7 +6586,9 @@ _.lt(3, 1);
 
 Checks if `value` is less than `other`.
 
-#### Since
+#### Underscore
+
+### Since
 3.9.0
 
 #### Arguments
@@ -6274,7 +6621,9 @@ _.lte(3, 1);
 
 Checks if `value` is less than or equal to `other`.
 
-#### Since
+#### Underscore
+
+### Since
 3.9.0
 
 #### Arguments
@@ -6310,7 +6659,10 @@ _.toArray(null);
 
 Converts `value` to an array.
 
-#### Since
+#### Underscore
+<code>_.toArray(list) </code>
+
+### Since
 0.1.0
 
 #### Arguments
@@ -6345,7 +6697,9 @@ _.toFinite('3.2');
 
 Converts `value` to a finite number.
 
-#### Since
+#### Underscore
+
+### Since
 4.12.0
 
 #### Arguments
@@ -6384,7 +6738,9 @@ Converts `value` to an integer.
 **Note:** This method is loosely based on
 [`ToInteger`](http://www.ecma-international.org/ecma-262/7.0/#sec-tointeger).
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -6424,7 +6780,9 @@ array-like object.
 **Note:** This method is based on
 [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -6459,7 +6817,9 @@ _.toNumber('3.2');
 
 Converts `value` to a number.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -6495,7 +6855,9 @@ _.assign({ 'a': 1 }, _.toPlainObject(new Foo));
 Converts `value` to a plain object flattening inherited enumerable string
 keyed properties of `value` to own properties of the plain object.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -6531,7 +6893,9 @@ _.toSafeInteger('3.2');
 Converts `value` to a safe integer. A safe integer can be compared and
 represented correctly.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -6564,7 +6928,9 @@ _.toString([1, 2, 3]);
 Converts `value` to a string. An empty string is returned for `null`
 and `undefined` values. The sign of `-0` is preserved.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -6596,7 +6962,9 @@ _.add(6, 4);
 
 Adds two numbers.
 
-#### Since
+#### Underscore
+
+### Since
 3.4.0
 
 #### Arguments
@@ -6629,7 +6997,9 @@ _.ceil(6040, -2);
 
 Computes `number` rounded up to `precision`.
 
-#### Since
+#### Underscore
+
+### Since
 3.10.0
 
 #### Arguments
@@ -6656,7 +7026,9 @@ _.divide(6, 4);
 
 Divide two numbers.
 
-#### Since
+#### Underscore
+
+### Since
 4.7.0
 
 #### Arguments
@@ -6689,7 +7061,9 @@ _.floor(4060, -2);
 
 Computes `number` rounded down to `precision`.
 
-#### Since
+#### Underscore
+
+### Since
 3.10.0
 
 #### Arguments
@@ -6720,7 +7094,9 @@ _.max([]);
 Computes the maximum value of `array`. If `array` is empty or falsey,
 `undefined` is returned.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -6754,7 +7130,9 @@ This method is like `_.max` except that it accepts `iteratee` which is
 invoked for each element in `array` to generate the criterion by which
 the value is ranked. The iteratee is invoked with one argument: *(value)*.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -6781,7 +7159,9 @@ _.mean([4, 2, 8, 6]);
 
 Computes the mean of the values in `array`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -6815,7 +7195,9 @@ This method is like `_.mean` except that it accepts `iteratee` which is
 invoked for each element in `array` to generate the value to be averaged.
 The iteratee is invoked with one argument: *(value)*.
 
-#### Since
+#### Underscore
+
+### Since
 4.7.0
 
 #### Arguments
@@ -6846,7 +7228,9 @@ _.min([]);
 Computes the minimum value of `array`. If `array` is empty or falsey,
 `undefined` is returned.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -6880,7 +7264,9 @@ This method is like `_.min` except that it accepts `iteratee` which is
 invoked for each element in `array` to generate the criterion by which
 the value is ranked. The iteratee is invoked with one argument: *(value)*.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -6907,7 +7293,9 @@ _.multiply(6, 4);
 
 Multiply two numbers.
 
-#### Since
+#### Underscore
+
+### Since
 4.7.0
 
 #### Arguments
@@ -6940,7 +7328,9 @@ _.round(4060, -2);
 
 Computes `number` rounded to `precision`.
 
-#### Since
+#### Underscore
+
+### Since
 3.10.0
 
 #### Arguments
@@ -6967,7 +7357,9 @@ _.subtract(6, 4);
 
 Subtract two numbers.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -6994,7 +7386,9 @@ _.sum([4, 2, 8, 6]);
 
 Computes the sum of the values in `array`.
 
-#### Since
+#### Underscore
+
+### Since
 3.4.0
 
 #### Arguments
@@ -7028,7 +7422,9 @@ This method is like `_.sum` except that it accepts `iteratee` which is
 invoked for each element in `array` to generate the value to be summed.
 The iteratee is invoked with one argument: *(value)*.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -7064,7 +7460,9 @@ _.clamp(10, -5, 5);
 
 Clamps `number` within the inclusive `lower` and `upper` bounds.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -7113,7 +7511,9 @@ Checks if `n` is between `start` and up to, but not including, `end`. If
 If `start` is greater than `end` the params are swapped to support
 negative ranges.
 
-#### Since
+#### Underscore
+
+### Since
 3.3.0
 
 #### Arguments
@@ -7157,7 +7557,9 @@ floats, a floating-point number is returned instead of an integer.
 **Note:** JavaScript follows the IEEE-754 standard for resolving
 floating-point values which can produce unexpected results.
 
-#### Since
+#### Underscore
+
+### Since
 0.7.0
 
 #### Arguments
@@ -7259,7 +7661,9 @@ inherited source properties.
 <code>_.extend(destination, *sources) </code>
 Copes own and inherited properties to destination object.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Aliases
@@ -7301,7 +7705,9 @@ is invoked with five arguments: *(objValue, srcValue, key, object, source)*.
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Aliases
@@ -7344,7 +7750,9 @@ is invoked with five arguments: *(objValue, srcValue, key, object, source)*.
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -7374,7 +7782,9 @@ _.at(object, ['a[0].b.c', 'a[1]']);
 
 Creates an array of values corresponding to `paths` of `object`.
 
-#### Since
+#### Underscore
+
+### Since
 1.0.0
 
 #### Arguments
@@ -7420,7 +7830,9 @@ Creates an object that inherits from the `prototype` object. If a
 `properties` object is given, its own enumerable string keyed properties
 are assigned to the created object.
 
-#### Since
+#### Underscore
+
+### Since
 2.3.0
 
 #### Arguments
@@ -7453,7 +7865,9 @@ Once a property is set, additional values of the same property are ignored.
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -7484,7 +7898,9 @@ default properties.
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### Underscore
+
+### Since
 3.10.0
 
 #### Arguments
@@ -7530,7 +7946,9 @@ _.findKey(users, 'active');
 This method is like `_.find` except that it returns the key of the first
 element `predicate` returns truthy for instead of the element itself.
 
-#### Since
+#### Underscore
+
+### Since
 1.1.0
 
 #### Arguments
@@ -7576,7 +7994,9 @@ _.findLastKey(users, 'active');
 This method is like `_.findKey` except that it iterates over elements of
 a collection in the opposite order.
 
-#### Since
+#### Underscore
+
+### Since
 2.0.0
 
 #### Arguments
@@ -7615,7 +8035,9 @@ object and invokes `iteratee` for each property. The iteratee is invoked
 with three arguments: *(value, key, object)*. Iteratee functions may exit
 iteration early by explicitly returning `false`.
 
-#### Since
+#### Underscore
+
+### Since
 0.3.0
 
 #### Arguments
@@ -7649,7 +8071,9 @@ _.forInRight(new Foo, function(value, key) {
 This method is like `_.forIn` except that it iterates over properties of
 `object` in the opposite order.
 
-#### Since
+#### Underscore
+
+### Since
 2.0.0
 
 #### Arguments
@@ -7688,7 +8112,9 @@ invokes `iteratee` for each property. The iteratee is invoked with three
 arguments: *(value, key, object)*. Iteratee functions may exit iteration
 early by explicitly returning `false`.
 
-#### Since
+#### Underscore
+
+### Since
 0.3.0
 
 #### Arguments
@@ -7725,7 +8151,9 @@ _.forOwnRight(new Foo, function(value, key) {
 This method is like `_.forOwn` except that it iterates over properties of
 `object` in the opposite order.
 
-#### Since
+#### Underscore
+
+### Since
 2.0.0
 
 #### Arguments
@@ -7760,7 +8188,9 @@ _.functions(new Foo);
 Creates an array of function property names from own enumerable properties
 of `object`.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -7794,7 +8224,9 @@ _.functionsIn(new Foo);
 Creates an array of function property names from own and inherited
 enumerable properties of `object`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -7829,7 +8261,9 @@ _.get(object, 'a.b.c', 'default');
 Gets the value at `path` of `object`. If the resolved value is
 `undefined`, the `defaultValue` is returned in its place.
 
-#### Since
+#### Underscore
+
+### Since
 3.7.0
 
 #### Arguments
@@ -7910,7 +8344,9 @@ _.hasIn(object, 'b');
 
 Checks if `path` is a direct or inherited property of `object`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -7941,7 +8377,9 @@ Creates an object composed of the inverted keys and values of `object`.
 If `object` contains duplicate values, subsequent values overwrite
 property assignments of previous values.
 
-#### Since
+#### Underscore
+
+### Since
 0.7.0
 
 #### Arguments
@@ -7978,7 +8416,9 @@ corresponding inverted value of each inverted key is an array of keys
 responsible for generating the inverted value. The iteratee is invoked
 with one argument: *(value)*.
 
-#### Since
+#### Underscore
+
+### Since
 4.1.0
 
 #### Arguments
@@ -8007,7 +8447,9 @@ _.invoke(object, 'a[0].b.c.slice', 1, 3);
 
 Invokes the method at `path` of `object`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -8092,7 +8534,9 @@ Creates an array of the own and inherited enumerable property names of `object`.
 <br>
 **Note:** Non-object values are coerced to objects.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -8123,7 +8567,9 @@ same values as `object` and keys generated by running each own enumerable
 string keyed property of `object` thru `iteratee`. The iteratee is invoked
 with three arguments: *(value, key, object)*.
 
-#### Since
+#### Underscore
+
+### Since
 3.8.0
 
 #### Arguments
@@ -8209,7 +8655,9 @@ sources overwrite property assignments of previous sources.
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### Underscore
+
+### Since
 0.5.0
 
 #### Arguments
@@ -8252,7 +8700,9 @@ method instead. The `customizer` is invoked with six arguments:<br>
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -8286,7 +8736,9 @@ own and inherited enumerable property paths of `object` that are not omitted.
 <br>
 **Note:** This method is considerably slower than `_.pick`.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -8318,7 +8770,9 @@ the own and inherited enumerable string keyed properties of `object` that
 `predicate` doesn't return truthy for. The predicate is invoked with two
 arguments: *(value, key)*.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -8347,7 +8801,9 @@ _.pick(object, ['a', 'c']);
 
 Creates an object composed of the picked `object` properties.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -8377,7 +8833,9 @@ _.pickBy(object, _.isNumber);
 Creates an object composed of the `object` properties `predicate` returns
 truthy for. The predicate is invoked with two arguments: *(value, key)*.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -8417,7 +8875,9 @@ This method is like `_.get` except that if the resolved value is a
 function it's invoked with the `this` binding of its parent object and
 its result is returned.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -8458,7 +8918,9 @@ are created for all other missing properties. Use `_.setWith` to customize
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### Underscore
+
+### Since
 3.7.0
 
 #### Arguments
@@ -8494,7 +8956,9 @@ with three arguments: *(nsValue, key, nsObject)*.
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -8525,6 +8989,11 @@ Foo.prototype.c = 3;
 
 _.toPairs(new Foo);
 // => [['a', 1], ['b', 2]] (iteration order is not guaranteed)
+
+//Underscore
+_.pairs({one: 1, two: 2, three: 3});
+=> [["one", 1], ["two", 2], ["three", 3]]
+
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L13706 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.topairs "See the npm package") [&#x24C9;][1]
 
@@ -8532,7 +9001,10 @@ Creates an array of own enumerable string keyed-value pairs for `object`
 which can be consumed by `_.fromPairs`. If `object` is a map or set, its
 entries are returned.
 
-#### Since
+#### Underscore
+<code>_.pairs(object) </code>
+
+### Since
 4.0.0
 
 #### Aliases
@@ -8570,7 +9042,9 @@ Creates an array of own and inherited enumerable string keyed-value pairs
 for `object` which can be consumed by `_.fromPairs`. If `object` is a map
 or set, its entries are returned.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Aliases
@@ -8613,7 +9087,9 @@ provided, a new object with the same `[[Prototype]]` will be used. The
 iteratee is invoked with four arguments: *(accumulator, value, key, object)*.
 Iteratee functions may exit iteration early by explicitly returning `false`.
 
-#### Since
+#### Underscore
+
+### Since
 1.3.0
 
 #### Arguments
@@ -8654,7 +9130,9 @@ Removes the property at `path` of `object`.
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -8693,7 +9171,9 @@ is invoked with one argument: *(value)*.
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### Underscore
+
+### Since
 4.6.0
 
 #### Arguments
@@ -8729,7 +9209,9 @@ with three arguments: *(nsValue, key, nsObject)*.
 <br>
 **Note:** This method mutates `object`.
 
-#### Since
+#### Underscore
+
+### Since
 4.6.0
 
 #### Arguments
@@ -8771,7 +9253,9 @@ Creates an array of the own enumerable string keyed property values of `object`.
 <br>
 **Note:** Non-object values are coerced to objects.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -8808,7 +9292,9 @@ values of `object`.
 <br>
 **Note:** Non-object values are coerced to objects.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -8992,7 +9478,9 @@ Creates a `lodash` wrapper instance that wraps `value` with explicit method
 chain sequences enabled. The result of such sequences must be unwrapped
 with `_#value`.
 
-#### Since
+#### Underscore
+
+### Since
 1.3.0
 
 #### Arguments
@@ -9026,7 +9514,9 @@ This method invokes `interceptor` and returns `value`. The interceptor
 is invoked with one argument; *(value)*. The purpose of this method is to
 "tap into" a method chain sequence in order to modify intermediate results.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -9061,7 +9551,9 @@ This method is like `_.tap` except that it returns the result of `interceptor`.
 The purpose of this method is to "pass thru" values replacing intermediate
 results in a method chain sequence.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -9093,7 +9585,9 @@ Array.from(wrapped);
 
 Enables the wrapper to be iterable.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Returns
@@ -9118,7 +9612,9 @@ _(object).at(['a[0].b.c', 'a[1]']).value();
 
 This method is the wrapper version of `_.at`.
 
-#### Since
+#### Underscore
+
+### Since
 1.0.0
 
 #### Arguments
@@ -9158,7 +9654,9 @@ _(users)
 
 Creates a `lodash` wrapper instance with explicit method chain sequences enabled.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Returns
@@ -9194,7 +9692,9 @@ console.log(array);
 
 Executes the chain sequence and returns the wrapped result.
 
-#### Since
+#### Underscore
+
+### Since
 3.2.0
 
 #### Returns
@@ -9226,7 +9726,9 @@ wrapped.next();
 Gets the next value on a wrapped object following the
 [iterator protocol](https://mdn.io/iteration_protocols#iterator).
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Returns
@@ -9259,7 +9761,9 @@ wrapped.value();
 
 Creates a clone of the chain sequence planting `value` as the wrapped value.
 
-#### Since
+#### Underscore
+
+### Since
 3.2.0
 
 #### Arguments
@@ -9293,7 +9797,9 @@ This method is the wrapper version of `_.reverse`.
 <br>
 **Note:** This method mutates the wrapped array.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Returns
@@ -9316,7 +9822,9 @@ _([1, 2, 3]).value();
 
 Executes the chain sequence to resolve the unwrapped value.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Aliases
@@ -9354,7 +9862,9 @@ _.camelCase('__FOO_BAR__');
 
 Converts `string` to [camel case](https://en.wikipedia.org/wiki/CamelCase).
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -9381,7 +9891,9 @@ _.capitalize('FRED');
 Converts the first character of `string` to upper case and the remaining
 to lower case.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -9411,7 +9923,9 @@ and [Latin Extended-A](https://en.wikipedia.org/wiki/Latin_Extended-A)
 letters to basic Latin letters and removing
 [combining diacritical marks](https://en.wikipedia.org/wiki/Combining_Diacritical_Marks).
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -9443,7 +9957,9 @@ _.endsWith('abc', 'b', 2);
 
 Checks if `string` ends with the given target string.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -9488,7 +10004,9 @@ When working with HTML you should always
 [quote attribute values](http://wonko.com/post/html-escaping) to reduce
 XSS vectors.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -9515,7 +10033,9 @@ _.escapeRegExp('[lodash](https://lodash.com/)');
 Escapes the `RegExp` special characters "^", "$", "\", ".", "*", "+",
 "?", "(", ")", "[", "]", "{", "}", and "|" in `string`.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -9548,7 +10068,9 @@ _.kebabCase('__FOO_BAR__');
 Converts `string` to
 [kebab case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles).
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -9580,7 +10102,9 @@ _.lowerCase('__FOO_BAR__');
 
 Converts `string`, as space separated words, to lower case.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -9609,7 +10133,9 @@ _.lowerFirst('FRED');
 
 Converts the first character of `string` to lower case.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -9642,7 +10168,9 @@ _.pad('abc', 3);
 Pads `string` on the left and right sides if it's shorter than `length`.
 Padding characters are truncated if they can't be evenly divided by `length`.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -9677,7 +10205,9 @@ _.padEnd('abc', 3);
 Pads `string` on the right side if it's shorter than `length`. Padding
 characters are truncated if they exceed `length`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -9712,7 +10242,9 @@ _.padStart('abc', 3);
 Pads `string` on the left side if it's shorter than `length`. Padding
 characters are truncated if they exceed `length`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -9749,7 +10281,9 @@ hexadecimal, in which case a `radix` of `16` is used.
 **Note:** This method aligns with the
 [ES5 implementation](https://es5.github.io/#x15.1.2.2) of `parseInt`.
 
-#### Since
+#### Underscore
+
+### Since
 1.1.0
 
 #### Arguments
@@ -9782,7 +10316,9 @@ _.repeat('abc', 0);
 
 Repeats the given string `n` times.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -9813,7 +10349,9 @@ Replaces matches for `pattern` in `string` with `replacement`.
 **Note:** This method is based on
 [`String#replace`](https://mdn.io/String/replace).
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -9848,7 +10386,9 @@ _.snakeCase('--FOO-BAR--');
 Converts `string` to
 [snake case](https://en.wikipedia.org/wiki/Snake_case).
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -9878,7 +10418,9 @@ Splits `string` by `separator`.
 **Note:** This method is based on
 [`String#split`](https://mdn.io/String/split).
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -9913,7 +10455,9 @@ _.startCase('__FOO_BAR__');
 Converts `string` to
 [start case](https://en.wikipedia.org/wiki/Letter_case#Stylistic_or_specialised_usage).
 
-#### Since
+#### Underscore
+
+### Since
 3.1.0
 
 #### Arguments
@@ -9945,7 +10489,9 @@ _.startsWith('abc', 'b', 1);
 
 Checks if `string` starts with the given target string.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -10106,7 +10652,9 @@ _.toLower('__FOO_BAR__');
 Converts `string`, as a whole, to lower case just like
 [String#toLowerCase](https://mdn.io/toLowerCase).
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -10139,7 +10687,9 @@ _.toUpper('__foo_bar__');
 Converts `string`, as a whole, to upper case just like
 [String#toUpperCase](https://mdn.io/toUpperCase).
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -10171,7 +10721,9 @@ _.map(['  foo  ', '  bar  '], _.trim);
 
 Removes leading and trailing whitespace or specified characters from `string`.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -10201,7 +10753,9 @@ _.trimEnd('-_-abc-_-', '_-');
 
 Removes trailing whitespace or specified characters from `string`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -10231,7 +10785,9 @@ _.trimStart('-_-abc-_-', '_-');
 
 Removes leading whitespace or specified characters from `string`.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -10277,7 +10833,9 @@ Truncates `string` if its longer than the given maximum string length.
 The last characters of the truncated string are replaced with the omission
 string which defaults to "...".
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -10313,7 +10871,9 @@ their corresponding characters.
 **Note:** No other HTML entities are unescaped. To unescape additional
 HTML entities use a third-party library like [_he_](https://mths.be/he).
 
-#### Since
+#### Underscore
+
+### Since
 0.6.0
 
 #### Arguments
@@ -10345,7 +10905,9 @@ _.upperCase('__foo_bar__');
 
 Converts `string`, as space separated words, to upper case.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -10374,7 +10936,9 @@ _.upperFirst('FRED');
 
 Converts the first character of `string` to upper case.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -10403,7 +10967,9 @@ _.words('fred, barney, & pebbles', /[^, ]+/g);
 
 Splits `string` into an array of its words.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -10443,7 +11009,9 @@ if (_.isError(elements)) {
 Attempts to invoke `func`, returning either the result or the caught error
 object. Any additional arguments are provided to `func` when it's invoked.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -10482,7 +11050,9 @@ method.
 <br>
 **Note:** This method doesn't set the "length" property of bound functions.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -10524,7 +11094,9 @@ function of the first predicate to return truthy. The predicate-function
 pairs are invoked with the `this` binding and arguments of the created
 function.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -10561,7 +11133,9 @@ all predicates return truthy, else `false`.
 **Note:** The created function is equivalent to `_.conformsTo` with
 `source` partially applied.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -10592,7 +11166,9 @@ console.log(objects[0] === objects[1]);
 
 Creates a function that returns `value`.
 
-#### Since
+#### Underscore
+
+### Since
 2.4.0
 
 #### Arguments
@@ -10623,7 +11199,9 @@ Checks `value` to determine whether a default value should be returned in
 its place. The `defaultValue` is returned if `value` is `NaN`, `null`,
 or `undefined`.
 
-#### Since
+#### Underscore
+
+### Since
 4.14.0
 
 #### Arguments
@@ -10657,7 +11235,9 @@ Creates a function that returns the result of invoking the given functions
 with the `this` binding of the created function, where each successive
 invocation is supplied the return value of the previous.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -10700,7 +11280,10 @@ invokes the given functions from right to left.
 <code> _.compose(*functions)  </code>
 Returns the composition of a list of functions, where each function consumes the return value of the function that follows. In math terms, composing the functions f(), g(), and h() produces f(g(h())).
 
-#### Since
+#### Underscore
+
+
+### Since
 3.0.0
 
 #### Arguments
@@ -10728,7 +11311,9 @@ console.log(_.identity(object) === object);
 
 This method returns the first argument it receives.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -10827,7 +11412,9 @@ Partial comparisons will match empty array and empty object `source`
 values against any array or object value, respectively. See `_.isEqual`
 for a list of supported value comparisons.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -10865,7 +11452,9 @@ object value is equivalent, else `false`.
 `srcValue` values against any array or object value, respectively. See
 `_.isEqual` for a list of supported value comparisons.
 
-#### Since
+#### Underscore
+
+### Since
 3.2.0
 
 #### Arguments
@@ -10901,7 +11490,9 @@ _.map(objects, _.method(['a', 'b']));
 Creates a function that invokes the method at `path` of a given object.
 Any additional arguments are provided to the invoked method.
 
-#### Since
+#### Underscore
+
+### Since
 3.7.0
 
 #### Arguments
@@ -10936,7 +11527,9 @@ The opposite of `_.method`; this method creates a function that invokes
 the method at a given path of `object`. Any additional arguments are
 provided to the invoked method.
 
-#### Since
+#### Underscore
+
+### Since
 3.7.0
 
 #### Arguments
@@ -10983,7 +11576,9 @@ are added to its prototype as well.
 **Note:** Use `_.runInContext` to create a pristine `lodash` function to
 avoid conflicts caused by modifying the original.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -11012,7 +11607,9 @@ var lodash = _.noConflict();
 Reverts the `_` variable to its previous value and returns a reference to
 the `lodash` function.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Returns
@@ -11035,7 +11632,9 @@ _.times(2, _.noop);
 
 This method returns `undefined`.
 
-#### Since
+#### Underscore
+
+### Since
 2.3.0
 
 
@@ -11061,7 +11660,9 @@ func('a', 'b', 'c', 'd');
 Creates a function that gets the argument at index `n`. If `n` is negative,
 the nth argument from the end is returned.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -11090,7 +11691,9 @@ func(1, 2, 3, 4);
 Creates a function that invokes `iteratees` with the arguments it receives
 and returns their results.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -11125,7 +11728,9 @@ func(NaN);
 Creates a function that checks if **all** of the `predicates` return
 truthy when invoked with the arguments it receives.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -11160,7 +11765,9 @@ func(NaN);
 Creates a function that checks if **any** of the `predicates` return
 truthy when invoked with the arguments it receives.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -11194,7 +11801,9 @@ _.map(_.sortBy(objects, _.property(['a', 'b'])), 'a.b');
 
 Creates a function that returns the value at `path` of a given object.
 
-#### Since
+#### Underscore
+
+### Since
 2.4.0
 
 #### Arguments
@@ -11227,7 +11836,9 @@ _.map([['a', '2'], ['c', '0']], _.propertyOf(object));
 The opposite of `_.property`; this method creates a function that returns
 the value at a given path of `object`.
 
-#### Since
+#### Underscore
+
+### Since
 3.0.0
 
 #### Arguments
@@ -11328,7 +11939,9 @@ _.rangeRight(0);
 This method is like `_.range` except that it populates values in
 descending order.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -11371,7 +11984,9 @@ var defer = _.runInContext({ 'setTimeout': setImmediate }).defer;
 
 Create a new pristine `lodash` function using the `context` object.
 
-#### Since
+#### Underscore
+
+### Since
 1.1.0
 
 #### Arguments
@@ -11402,7 +12017,9 @@ console.log(arrays[0] === arrays[1]);
 
 This method returns a new empty array.
 
-#### Since
+#### Underscore
+
+### Since
 4.13.0
 
 #### Returns
@@ -11425,7 +12042,9 @@ _.times(2, _.stubFalse);
 
 This method returns `false`.
 
-#### Since
+#### Underscore
+
+### Since
 4.13.0
 
 #### Returns
@@ -11453,7 +12072,9 @@ console.log(objects[0] === objects[1]);
 
 This method returns a new empty object.
 
-#### Since
+#### Underscore
+
+### Since
 4.13.0
 
 #### Returns
@@ -11476,7 +12097,9 @@ _.times(2, _.stubString);
 
 This method returns an empty string.
 
-#### Since
+#### Underscore
+
+### Since
 4.13.0
 
 #### Returns
@@ -11499,7 +12122,9 @@ _.times(2, _.stubTrue);
 
 This method returns `true`.
 
-#### Since
+#### Underscore
+
+### Since
 4.13.0
 
 #### Returns
@@ -11526,7 +12151,9 @@ _.times(3, String);
 Invokes the iteratee `n` times, returning an array of the results of
 each invocation. The iteratee is invoked with one argument; *(index)*.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
@@ -11556,7 +12183,9 @@ _.toPath('a[0].b.c');
 
 Converts `value` to a property path array.
 
-#### Since
+#### Underscore
+
+### Since
 4.0.0
 
 #### Arguments
@@ -11585,7 +12214,9 @@ _.uniqueId();
 
 Generates a unique ID. If `prefix` is given, the ID is appended to it.
 
-#### Since
+#### Underscore
+
+### Since
 0.1.0
 
 #### Arguments
