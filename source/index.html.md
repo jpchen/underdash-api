@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: Documentation Reference
 
 language_tabs:
   - javascript
@@ -14,7 +14,7 @@ search: true
 
 # Introduction
 
- This is a cross documentation of [lodash](https://lodash.com/) and [underscore.js](http://underscorejs.org/).  This arose from my need to translate some underscore.js code, and I noticed that there was no place that aggregated the APIs together.  This does not attempt to prescribe one nor the other as the library of choice, as there is plenty of [discussion](http://stackoverflow.com/questions/13789618/differences-between-lodash-and-underscore) of that already.  As of the date of writing, this uses lodash [4.17.2](https://www.npmjs.com/package/lodash) and underscore [1.8.3](https://www.npmjs.com/package/underscore).  Freely use for your own benefit (risk).
+ This is a cross documentation of [lodash](https://lodash.com/) and [underscore.js](http://underscorejs.org/).  This arose from my need to translate some underscore.js code, and I noticed that there was no place that aggregated the docs together.  This does not attempt to prescribe one nor the other as the library of choice, as there is plenty of [discussion](http://stackoverflow.com/questions/13789618/differences-between-lodash-and-underscore) of that already.  As of the date of writing, this uses lodash [4.17.2](https://www.npmjs.com/package/lodash) and underscore [1.8.3](https://www.npmjs.com/package/underscore).  Freely use for your own benefit (risk).
 
 # Table of Contents
 
@@ -1998,10 +1998,11 @@ _.first([5, 4, 3, 2, 1]);
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L8186 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.take "See the npm package") [&#x24C9;][1]
 
-Creates a slice of `array` with `n` elements taken from the beginning.
+Creates a slice of `array` with `n` elements taken from the beginning.  See: `_.first` and `_.head`.
 
 #### Underscore
-<code>_.first(array, [n])</code> Alias: head, take 
+<code>_.first(array, [n])</code> Alias: head, take <br>
+(Use equivalent lodash method)
 
 ### Since
 0.1.0
@@ -2620,7 +2621,8 @@ This method is like `_.fromPairs` except that it accepts two arrays,
 one of property identifiers and one of corresponding values.
 
 #### Underscore
-<code> _.object(list, [values]) </code>
+See: <code>_.zipObjects</code><br>
+See: <code>_.objects</code> (use lodash <code>_.fromPairs</code>)<br>
 
 #### Since
 0.4.0
@@ -2765,6 +2767,10 @@ _.every(users, ['active', false]);
 // The `_.property` iteratee shorthand.
 _.every(users, 'active');
 // => false
+
+// Underscore
+_.all(users, 'active');
+// => false
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L9143 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.every "See the npm package") [&#x24C9;][1]
 
@@ -2832,6 +2838,7 @@ arguments: *(value, index|key, collection)*.
 
 ### Underscore
 <code>_.filter(list, predicate, [context])</code> Alias: select <br> <br>
+Similar: <br>
 <code>_.where(list, properties)</code> <br> 
 * Looks through each value in the list, returning an array of all the values that contain all of the key-value pairs listed in properties.<br> <br>
 <code>_.findWhere(list, properties)</code> <br>
@@ -2881,6 +2888,12 @@ _.find(users, 'active');
 //Underscore
 var even = _.find([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
 => 2
+
+_.findWhere(publicServicePulitzers, {newsroom: "The New York Times"});
+=> {year: 1918, newsroom: "The New York Times",
+  reason: "For its public service in publishing in full so many official reports,
+  documents and speeches by European statesmen relating to the progress and
+  conduct of the war."}
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L9229 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.find "See the npm package") [&#x24C9;][1]
 
@@ -2890,6 +2903,7 @@ arguments: *(value, index|key, collection)*.
 
 #### Underscore
 <code>_.find(list, predicate, [context])</code> Alias: detect 
+<code>_.findWhere(list, properties) </code>
 
 #### Since
 0.1.0
@@ -3326,7 +3340,7 @@ var users = [
   { 'user': 'fred' }
 ];
 
-// The `_.property` iteratee shorthand.
+// The `_.property` iteratee shorthand (like 'pluck' in Underscore).
 _.map(users, 'user');
 // => ['barney', 'fred']
 
@@ -3442,12 +3456,11 @@ _.partition(users, 'active');
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L9653 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.partition "See the npm package") [&#x24C9;][1]
 
-Creates an array of elements split into two groups, the first of which
-contains elements `predicate` returns truthy for, the second of which
-contains elements `predicate` returns falsey for. The predicate is
+Split array into two arrays: one whose elements all satisfy predicate and one whose elements all do not satisfy predicate. The predicate is
 invoked with one argument: *(value)*.
 
 #### Underscore
+<code>_.partition(array, predicate) </code>
 
 ### Since
 3.0.0
@@ -11396,6 +11409,10 @@ var objects = [
 
 _.filter(objects, _.matches({ 'a': 4, 'c': 6 }));
 // => [{ 'a': 4, 'b': 5, 'c': 6 }]
+
+//Underscore
+var ready = _.matcher({selected: true, visible: true});
+var readyToGoList = _.filter(list, ready);
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L15531 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.matches "See the npm package") [&#x24C9;][1]
 
@@ -11413,6 +11430,7 @@ values against any array or object value, respectively. See `_.isEqual`
 for a list of supported value comparisons.
 
 #### Underscore
+<code>_.matcher(attrs)</code> Alias: matches 
 
 ### Since
 3.0.0
