@@ -2475,6 +2475,9 @@ for equality comparisons.
 ```javascript
 _.xor([2, 1], [2, 3]);
 // => [1, 3]
+
+_.difference([1, 2, 3, 4, 5], [5, 2, 10]);
+=> [1, 3, 4]
 ```
 [&#x24C8;](https://github.com/lodash/lodash/blob/4.17.3/lodash.js#L8576 "View in source") [&#x24C3;](https://www.npmjs.com/package/lodash.xor "See the npm package") [&#x24C9;][1]
 
@@ -2484,6 +2487,8 @@ of the given arrays. The order of result values is determined by the order
 they occur in the arrays.
 
 #### Underscore
+`_.difference(array, *others) ` <br>
+`_.without(array, *values)`
 
 ### Since
 2.4.0
@@ -3161,6 +3166,7 @@ value of each key is an array of elements responsible for generating the
 key. The iteratee is invoked with one argument: *(value)*.
 
 #### Underscore
+<code>_.groupBy(list, iteratee, [context])</code>
 
 ### Since
 0.1.0
@@ -3411,6 +3417,7 @@ are sorted in ascending order. Otherwise, specify an order of "desc" for
 descending or "asc" for ascending sort order of corresponding values.
 
 #### Underscore
+`_.sortBy(list, iteratee, [context])`
 
 ### Since
 4.0.0
@@ -3851,6 +3858,7 @@ Gets the timestamp of the number of milliseconds that have elapsed since
 the Unix epoch *(1 January `1970 00`:00:00 UTC)*.
 
 #### Underscore
+<code>_.now()</code>
 
 ### Since
 2.4.0
@@ -5256,6 +5264,7 @@ _.isArguments([1, 2, 3]);
 Checks if `value` is likely an `arguments` object.
 
 #### Underscore
+<code>_.isArguments(object)</code>
 
 ### Since
 0.1.0
@@ -5293,6 +5302,7 @@ _.isArray(_.noop);
 Checks if `value` is classified as an `Array` object.
 
 #### Underscore
+<code>_.isArray(object)</code>
 
 ### Since
 0.1.0
@@ -7960,6 +7970,7 @@ This method is like `_.find` except that it returns the key of the first
 element `predicate` returns truthy for instead of the element itself.
 
 #### Underscore
+<code>_.findKey(object, predicate, [context])</code>
 
 ### Since
 1.1.0
@@ -8202,6 +8213,7 @@ Creates an array of function property names from own enumerable properties
 of `object`.
 
 #### Underscore
+<code> _.functions(object) </code>
 
 ### Since
 0.1.0
@@ -8461,6 +8473,7 @@ _.invoke(object, 'a[0].b.c.slice', 1, 3);
 Invokes the method at `path` of `object`.
 
 #### Underscore
+<code>_.invoke(list, methodName, *arguments)</code>
 
 ### Since
 4.0.0
@@ -8815,6 +8828,7 @@ _.pick(object, ['a', 'c']);
 Creates an object composed of the picked `object` properties.
 
 #### Underscore
+<code>_.pick(object, *keys) </code>
 
 ### Since
 0.1.0
@@ -8889,6 +8903,7 @@ function it's invoked with the `this` binding of its parent object and
 its result is returned.
 
 #### Underscore
+<code>_.result(object, property, [defaultValue]) </code>
 
 ### Since
 0.1.0
@@ -9267,6 +9282,7 @@ Creates an array of the own enumerable string keyed property values of `object`.
 **Note:** Non-object values are coerced to objects.
 
 #### Underscore
+<code>_.values(object)</code>
 
 ### Since
 0.1.0
@@ -9528,6 +9544,7 @@ is invoked with one argument; *(value)*. The purpose of this method is to
 "tap into" a method chain sequence in order to modify intermediate results.
 
 #### Underscore
+<code>_.tap(object, interceptor)</code>
 
 ### Since
 0.1.0
@@ -10885,6 +10902,7 @@ their corresponding characters.
 HTML entities use a third-party library like [_he_](https://mths.be/he).
 
 #### Underscore
+<code>_.unescape(string)</code>
 
 ### Since
 0.6.0
@@ -11293,8 +11311,6 @@ invokes the given functions from right to left.
 <code> _.compose(*functions)  </code>
 Returns the composition of a list of functions, where each function consumes the return value of the function that follows. In math terms, composing the functions f(), g(), and h() produces f(g(h())).
 
-#### Underscore
-
 
 ### Since
 3.0.0
@@ -11626,6 +11642,8 @@ Reverts the `_` variable to its previous value and returns a reference to
 the `lodash` function.
 
 #### Underscore
+<code>_.noConflict() </code> <br>
+Give control of the _ variable back to its previous owner. Returns a reference to the Underscore object.
 
 ### Since
 0.1.0
@@ -12233,6 +12251,7 @@ _.uniqueId();
 Generates a unique ID. If `prefix` is given, the ID is appended to it.
 
 #### Underscore
+<code>_.uniqueId([prefix])</code>
 
 ### Since
 0.1.0
